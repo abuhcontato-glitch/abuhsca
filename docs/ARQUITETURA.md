@@ -91,3 +91,6 @@ Card 07 atualizado com mockup editorial de manual, paleta, tipografia e aplicaç
 
 ## Site institucional e e-commerce — novos mockups
 Cards 10 e 11 atualizados com imagens demonstrativas baseadas na logo fornecida. Site institucional usa a fachada como referência e foco em orçamento; e-commerce mostra categorias, busca, catálogo e página de produto em múltiplos dispositivos. Exibição integral sem faixas externas. São conceitos visuais; não constituem site corporativo, loja ou checkout efetivamente implementados.
+
+## Landing page — formulário e chatbot
+Card 12 atualizado com mockup demonstrativo focado em conversão: formulário de orçamento no banner principal, CTA e chatbot aberto para dúvidas, com versão móvel. Imagem integral sem faixa de título externa. Formulário e chatbot são elementos visuais da imagem, não novas integrações funcionais da aplicação.
