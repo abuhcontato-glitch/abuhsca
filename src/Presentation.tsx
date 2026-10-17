@@ -14,8 +14,8 @@ export function AboutSection() {
   return <section id="quem-sou" className="about-section">
     <div className="section-number">02 / 10 · QUEM SOU EU?</div>
     <div className="about-grid">
-      <figure className="about-portrait"><img src={`${import.meta.env.BASE_URL}media/construcel/maike-christian-arri.png`} alt="Maike Christian com uma câmera ARRI" width="1442" height="1091" loading="lazy" decoding="async"/><figcaption>MAIKE CHRISTIAN · DIREÇÃO CRIATIVA</figcaption></figure>
       <div className="about-copy"><p className="eyebrow">PRAZER, EU SOU</p><h2>MAIKE<br/>CHRISTIAN<span>.</span></h2><p className="about-alias">Mas pode me chamar de Abuh.</p><p>Sou publicitário, diretor criativo e estrategista de marketing. Minha trajetória reúne criatividade, comunicação, tecnologia e negócios.</p><p>Meu trabalho vai além da estética: desenvolvo estratégias para posicionar marcas, conquistar audiências e gerar oportunidades comerciais.</p><p>Foi dessa visão que nasceu a ABUHSCA — Agência Criativa. Uma empresa que integra estratégia, publicidade, inteligência artificial, produção audiovisual e performance.</p><blockquote>Eu não vendo apenas marketing.<br/><strong>Eu construo estratégias para negócios crescerem.</strong></blockquote><SectionLink id="metodologia" className="about-method-link">Conheça a nossa metodologia <ArrowDown size={17}/></SectionLink></div>
+      <figure className="about-portrait"><img src={`${import.meta.env.BASE_URL}media/construcel/maike-christian-arri.png`} alt="Maike Christian com uma câmera ARRI" width="1442" height="1091" loading="lazy" decoding="async"/></figure>
     </div>
   </section>;
 }
