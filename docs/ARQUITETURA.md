@@ -76,3 +76,6 @@ Imagem de Quem sou eu substituída pelo PNG Cinegrafista com câmera ARRI, ident
 
 ## Recorte das prévias visuais
 As faixas de títulos gravadas nas imagens da galeria foram excluídas da área exibida por recorte CSS: 3% no topo e 17% na base, usando as dimensões reais de cada arquivo. Os originais são preservados. A ampliação passou a usar dialog nativo com o mesmo recorte, fechamento por Escape/botão e retorno de foco, substituindo os links diretos aos PNGs com títulos. Legendas HTML permanecem fora da imagem. Logo e retrato transparente não são recortados.
+
+## Google Meu Negócio
+Por solicitação do usuário, o mockup Workspace (card 08) foi substituído por imagem demonstrativa de Google Meu Negócio / Perfil da Empresa, criada a partir da referência original. Legenda e texto alternativo atualizados. O novo arquivo não tem faixa de título embutida e é exibido integralmente, inclusive ao ampliar. Nenhuma integração ou perfil real foi criado ou alterado.

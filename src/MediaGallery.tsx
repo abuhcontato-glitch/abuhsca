@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 const labels = [
  'Fachada Construcel', 'Ana Paula — protagonista', 'Maike Christian — direção', 'Grandes audiências',
  'Campanhas e projetos criativos', 'Plano de marketing — 120 páginas', 'Manual de identidade visual',
- 'Google Workspace', 'Domínio e hospedagem', 'Site institucional', 'E-commerce',
+ 'Google Meu Negócio — Perfil da Empresa', 'Domínio e hospedagem', 'Site institucional', 'E-commerce',
  'Landing pages de conversão', 'Ana Paula produzindo conteúdo', 'Meta Ads — descoberta',
  'Google Ads — intenção de compra', 'Dashboard comercial', 'SAC 360 — omnichannel',
  'CRM — Kanban de vendas', 'Chatbots e agentes de IA', 'E-mail marketing e relacionamento',
@@ -22,8 +22,9 @@ const groups: Record<string, number[]> = {
 };
 function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
  const [width, height] = dimensions[String(number) as keyof typeof dimensions];
- return <div className="media-crop" style={{ aspectRatio: width / (height * .8) }}>
-  <img src={`${import.meta.env.BASE_URL}media/construcel/${String(number).padStart(2,'0')}.png`} alt={`Prévia demonstrativa: ${labels[number-1]}`} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async"/>
+ const imageFile = number === 8 ? 'google-meu-negocio.png' : `${String(number).padStart(2,'0')}.png`;
+ return <div className={`media-crop ${number === 8 ? 'media-uncropped' : ''}`} style={{ aspectRatio: width / (height * (number === 8 ? 1 : .8)) }}>
+  <img src={`${import.meta.env.BASE_URL}media/construcel/${imageFile}`} alt={`Prévia demonstrativa: ${labels[number-1]}`} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async"/>
  </div>;
 }
 
@@ -37,7 +38,7 @@ export function MediaGallery({ section, numbers }: { section?: string; numbers?:
  const items = numbers ?? groups[section ?? ''] ?? [];
  if (!items.length) return null;
  return <div className={`media-gallery ${items.length === 1 ? 'media-single' : ''}`}>
-  <p className="media-disclaimer">PRÉVIAS VISUAIS FORNECIDAS · DEMONSTRAÇÃO CONCEITUAL</p>
+  <p className="media-disclaimer">PRÉVIAS VISUAIS · DEMONSTRAÇÃO CONCEITUAL</p>
   {items.map(number => <figure key={number} className="media-card">
    <button type="button" className="media-open" aria-label={`Ampliar ${labels[number-1]}`} onClick={event => { returnFocus.current = event.currentTarget; setSelected(number); }}>
     <CroppedImage number={number}/>
