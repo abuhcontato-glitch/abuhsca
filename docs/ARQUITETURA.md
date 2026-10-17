@@ -79,3 +79,6 @@ As faixas de títulos gravadas nas imagens da galeria foram excluídas da área 
 
 ## Google Meu Negócio
 Por solicitação do usuário, o mockup Workspace (card 08) foi substituído por imagem demonstrativa de Google Meu Negócio / Perfil da Empresa, criada a partir da referência original. Legenda e texto alternativo atualizados. O novo arquivo não tem faixa de título embutida e é exibido integralmente, inclusive ao ampliar. Nenhuma integração ou perfil real foi criado ou alterado.
+
+## Mockup HostGator
+Card de domínio e hospedagem substituído por representação ilustrativa do site HostGator em iMac e laptop. Imagem gerada identificada como demonstração, sem faixa de título externa; exibição integral inclusive na ampliação. Acesso ao site real foi bloqueado pela rede, portanto não se trata de captura da página atual. Nenhum serviço foi contratado.

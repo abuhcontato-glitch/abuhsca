@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 const labels = [
  'Fachada Construcel', 'Ana Paula — protagonista', 'Maike Christian — direção', 'Grandes audiências',
  'Campanhas e projetos criativos', 'Plano de marketing — 120 páginas', 'Manual de identidade visual',
- 'Google Meu Negócio — Perfil da Empresa', 'Domínio e hospedagem', 'Site institucional', 'E-commerce',
+ 'Google Meu Negócio — Perfil da Empresa', 'Domínio e hospedagem — HostGator', 'Site institucional', 'E-commerce',
  'Landing pages de conversão', 'Ana Paula produzindo conteúdo', 'Meta Ads — descoberta',
  'Google Ads — intenção de compra', 'Dashboard comercial', 'SAC 360 — omnichannel',
  'CRM — Kanban de vendas', 'Chatbots e agentes de IA', 'E-mail marketing e relacionamento',
@@ -22,8 +22,10 @@ const groups: Record<string, number[]> = {
 };
 function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
  const [width, height] = dimensions[String(number) as keyof typeof dimensions];
- const imageFile = number === 8 ? 'google-meu-negocio.png' : `${String(number).padStart(2,'0')}.png`;
- return <div className={`media-crop ${number === 8 ? 'media-uncropped' : ''}`} style={{ aspectRatio: width / (height * (number === 8 ? 1 : .8)) }}>
+ const replacements: Record<number, string> = { 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png' };
+ const imageFile = replacements[number] ?? `${String(number).padStart(2,'0')}.png`;
+ const uncropped = number in replacements;
+ return <div className={`media-crop ${uncropped ? 'media-uncropped' : ''}`} style={{ aspectRatio: width / (height * (uncropped ? 1 : .8)) }}>
   <img src={`${import.meta.env.BASE_URL}media/construcel/${imageFile}`} alt={`Prévia demonstrativa: ${labels[number-1]}`} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async"/>
  </div>;
 }
