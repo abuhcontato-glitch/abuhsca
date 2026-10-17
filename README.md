@@ -1,0 +1,30 @@
+# ABUHSCA × CONSTRUCEL
+
+Fase 01 da experiência comercial. React, TypeScript, Tailwind CSS e Vite.
+
+## Desenvolvimento
+Requer Node.js 24 e npm 11 (versões usadas na validação).
+
+```sh
+cd /workspace/abuhsca
+npm ci --cache /workspace/.npm-cache --no-audit --no-fund
+npm run dev -- --port 5173
+```
+
+```sh
+npm run build
+npm test
+```
+
+Abra a rota `/construcel` no navegador do ambiente de desenvolvimento. O servidor de produção deve fazer fallback das rotas da aplicação para `index.html`. Não usar o servidor Vite de desenvolvimento como produção.
+
+Leia `docs/ARQUITETURA.md` e `docs/BRIEFING.md` antes de desenvolver as próximas fases. As seções 02–10 estão reservadas e não implementadas. Nenhuma integração externa está ativa. SPRINT aparece abaixo da MARATONA após clicar em Liberar SPRINT; esse controle é visual, não autenticação. Proteção efetiva de dados dependerá de backend. Não há pagamentos, assinatura ou onboarding liberados.
+
+Configure a data real em `src/config.ts` somente após confirmação. O contador fica desativado enquanto a data não for definida. Nomes de marcas são tipográficos provisórios, não logos oficiais. Não inserir segredos no código ou em variáveis VITE_.
+
+## Publicação no GitHub Pages
+O workflow `.github/workflows/pages.yml` publica a branch `main` após testes e build. No GitHub, selecione Settings → Pages → Build and deployment → Source: GitHub Actions. Reexecute o workflow Publicar no GitHub Pages caso a primeira execução tenha ocorrido antes dessa seleção.
+
+Build para Pages: `npm run build -- --base=/abuhsca/`. Nesse destino a aplicação usa rotas por hash para suportar acesso direto e atualização de página sem servidor de fallback. URL prevista, a confirmar após deploy: `https://abuhcontato-glitch.github.io/abuhsca/#/construcel`.
+
+A página será pública, incluindo os arquivos de mídia e o conteúdo SPRINT no bundle. O botão Liberar SPRINT apenas controla a exibição e não oferece confidencialidade. Não há pagamentos ativos. O site ainda é uma apresentação em desenvolvimento.
