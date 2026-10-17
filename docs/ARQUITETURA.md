@@ -67,3 +67,6 @@ Por solicitação posterior, a geometria do hero foi substituída pela imagem 01
 
 ## Revisão do hero — composição centralizada
 iMac removido por solicitação do usuário. Hero em coluna única, com títulos, marca, texto e CTA centralizados. O PNG oficial ainda não foi recebido; exibe-se provisoriamente o nome Construcel em texto. Configurar proposal.logoPath com caminho relativo ao receber o arquivo aprovado. Não extrair um logo da fachada nem inventar um logo oficial.
+
+## Logo oficial recebida
+PNG fornecido no ZIP Logo Construcel Colorido 3D.png.zip aplicado no hero centralizado, substituindo o nome em texto. Arquivo original preservado em public/media/construcel/logo.png; apenas redimensionamento responsivo via CSS, sem distorção ou edição.
