@@ -70,3 +70,6 @@ iMac removido por solicitação do usuário. Hero em coluna única, com títulos
 
 ## Logo oficial recebida
 PNG fornecido no ZIP Logo Construcel Colorido 3D.png.zip aplicado no hero centralizado, substituindo o nome em texto. Arquivo original preservado em public/media/construcel/logo.png; apenas redimensionamento responsivo via CSS, sem distorção ou edição.
+
+## Retrato fornecido pelo responsável
+Imagem de Quem sou eu substituída pelo PNG Cinegrafista com câmera ARRI, identificado pelo próprio usuário como seu retrato. Arquivo preservado sem edições em public/media/construcel/maike-christian-arri.png, dimensões intrínsecas e texto alternativo atualizados.
