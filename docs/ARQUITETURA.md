@@ -58,3 +58,6 @@ Modelo futuro: proposals, offers, clients, memberships, media_assets, verified_m
 
 ## Mídia recebida — lote 03
 32 quadros PNG extraídos do ZIP fornecido, sem alterar as imagens. Painel 02 contém imagens 01–16; painel 01 contém 17–32 (ordem confirmada visualmente). Arquivos em public/media/construcel, componente MediaGallery com carregamento lazy, legendas e acesso à imagem original em nova aba. Imagem 01 após hero; 02 na apresentação; 03–05 em trajetória; 06–15 em Cérebro; 16–22 em Coração; 23–25 em Membros; 26–27 em Integrações; 28–30 em Audiências; 31–32 em Jornada. Tratadas como prévias conceituais até comprovação de origem; não constituem prova de resultados, identidade pessoal, portfólio real ou implantação. Seções ainda precisam do conteúdo e interações completos previstos no briefing.
+
+## Identidade Construcel — revisão de paleta
+Por solicitação do usuário, a interface passa a usar branco como base, azul (#0758A8) em títulos e estrutura, amarelo (#FFD044) nas faixas e laranja (#F5A623) em ações e destaques. Tons escolhidos a partir das referências fornecidas, sujeitos ao manual oficial. Aplicado também à SPRINT, menu móvel, estados de rota e ilustração SVG. As imagens fornecidas são preservadas, incluindo suas legendas vermelhas originais. Esta orientação substitui a paleta preta/vermelha do briefing.
