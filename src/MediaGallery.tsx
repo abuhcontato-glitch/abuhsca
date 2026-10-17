@@ -22,7 +22,7 @@ const groups: Record<string, number[]> = {
 };
 function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
  const [width, height] = dimensions[String(number) as keyof typeof dimensions];
- const replacements: Record<number, string> = { 6: 'plano-marketing-construcel.png', 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png' };
+ const replacements: Record<number, string> = { 6: 'plano-marketing-construcel.png', 7: 'manual-identidade-construcel.png', 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png' };
  const imageFile = replacements[number] ?? `${String(number).padStart(2,'0')}.png`;
  const uncropped = number in replacements;
  return <div className={`media-crop ${uncropped ? 'media-uncropped' : ''}`} style={{ aspectRatio: width / (height * (uncropped ? 1 : .8)) }}>

@@ -85,3 +85,6 @@ Card de domínio e hospedagem substituído por representação ilustrativa do si
 
 ## Plano de marketing — novo mockup
 Imagem do card 06 atualizada para mockup editorial de livro e páginas de plano estratégico, utilizando a logo fornecida como referência. Apresentação demonstrativa de 120 páginas, não um documento efetivamente entregue ou diagnóstico validado. Exibição integral, sem faixa de título externa, incluindo na ampliação.
+
+## Manual de identidade — novo mockup
+Card 07 atualizado com mockup editorial de manual, paleta, tipografia e aplicações em papelaria e uniformes, baseado na logo fornecida. Exibição integral sem faixa externa de título. Conteúdo gráfico, códigos de cores e família tipográfica mostrados são demonstrativos e não constituem especificação oficial validada ou manual entregue.
