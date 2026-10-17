@@ -64,3 +64,6 @@ Por solicitação do usuário, a interface passa a usar branco como base, azul (
 
 ## Revisão ao vivo — hero, apresentação e metodologia
 Por solicitação posterior, a geometria do hero foi substituída pela imagem 01 em mockup CSS de iMac; a fachada isolada foi removida. A inspeção direta do ZIP revelou que 02 está identificada como Ana Paula e 03 como Maike Christian — Direção; a associação anterior de 02 a Maike estava incorreta e foi corrigida. Quem sou eu agora usa 03, com apresentação textual. A seção Autoridade/portfólio/números foi substituída por uma introdução à metodologia com Cérebro, Coração, Membros e integrações. A ordem dos pilares posteriores foi preservada. Navegação interna usa SectionLink para rolar mantendo a rota hash no GitHub Pages. Nenhuma mídia foi alterada.
+
+## Revisão do hero — composição centralizada
+iMac removido por solicitação do usuário. Hero em coluna única, com títulos, marca, texto e CTA centralizados. O PNG oficial ainda não foi recebido; exibe-se provisoriamente o nome Construcel em texto. Configurar proposal.logoPath com caminho relativo ao receber o arquivo aprovado. Não extrair um logo da fachada nem inventar um logo oficial.

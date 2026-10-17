@@ -10,18 +10,6 @@ export function SectionLink({ id, children, className, onNavigate }: { id: strin
   }}>{children}</a>;
 }
 
-export function ImacMockup() {
-  return <figure className="imac-scene" aria-label="Fachada da Construcel em mockup de iMac">
-    <div className="imac-halo" aria-hidden="true"/>
-    <div className="imac-device">
-      <div className="imac-display"><span className="imac-camera" aria-hidden="true"/><div className="imac-screen"><img src={`${import.meta.env.BASE_URL}media/construcel/01.png`} alt="Prévia da fachada da Construcel apresentada na tela de um iMac" width="418" height="235" fetchPriority="high" decoding="async"/></div></div>
-      <div className="imac-chin" aria-hidden="true"><span/></div>
-      <div className="imac-stand" aria-hidden="true"/><div className="imac-foot" aria-hidden="true"/>
-    </div>
-    <figcaption><span className="status-dot"/>CONSTRUCEL · UM NOVO CAPÍTULO<span>PRÉVIA VISUAL</span></figcaption>
-  </figure>;
-}
-
 export function AboutSection() {
   return <section id="quem-sou" className="about-section">
     <div className="section-number">02 / 10 · QUEM SOU EU?</div>

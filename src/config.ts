@@ -3,6 +3,8 @@ export const proposal = {
   // Set only after confirming the actual presentation date. Never derive from visit time.
   presentedAt: null as string | null,
   validityMonths: 3,
+  // Relative path to the official PNG when supplied, e.g. media/construcel/logo.png.
+  logoPath: null as string | null,
   maratona: { setup: 60000, monthly: 12000, months: 12 },
   sprint: { setup: 3000, monthly: 3600, months: 3 },
   integrations: { authentication: false, signature: false, payment: false, scheduling: false },
