@@ -10,7 +10,7 @@ export const proposal = {
 export const sections = [
   { id: 'proposta', title: 'Proposta comercial', pillar: 'Uma visão. Um novo capítulo.' },
   { id: 'quem-sou', title: 'Quem sou eu?', pillar: 'A direção por trás da estratégia.' },
-  { id: 'trajetoria', title: 'Nossa trajetória fala por nós.', pillar: 'Autoridade, portfólio e números.' },
+  { id: 'metodologia', title: 'Uma operação. Três pilares.', pillar: 'Introdução à nossa metodologia.' },
   { id: 'cerebro', title: 'O cérebro da operação.', pillar: 'Estratégia, tecnologia e criatividade.' },
   { id: 'coracao', title: 'O coração da operação.', pillar: 'Relacionamentos, orçamentos e vendas.' },
   { id: 'membros', title: 'Os membros da operação.', pillar: 'Produtividade, colaboração e conhecimento.' },

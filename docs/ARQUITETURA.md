@@ -61,3 +61,6 @@ Modelo futuro: proposals, offers, clients, memberships, media_assets, verified_m
 
 ## Identidade Construcel — revisão de paleta
 Por solicitação do usuário, a interface passa a usar branco como base, azul (#0758A8) em títulos e estrutura, amarelo (#FFD044) nas faixas e laranja (#F5A623) em ações e destaques. Tons escolhidos a partir das referências fornecidas, sujeitos ao manual oficial. Aplicado também à SPRINT, menu móvel, estados de rota e ilustração SVG. As imagens fornecidas são preservadas, incluindo suas legendas vermelhas originais. Esta orientação substitui a paleta preta/vermelha do briefing.
+
+## Revisão ao vivo — hero, apresentação e metodologia
+Por solicitação posterior, a geometria do hero foi substituída pela imagem 01 em mockup CSS de iMac; a fachada isolada foi removida. A inspeção direta do ZIP revelou que 02 está identificada como Ana Paula e 03 como Maike Christian — Direção; a associação anterior de 02 a Maike estava incorreta e foi corrigida. Quem sou eu agora usa 03, com apresentação textual. A seção Autoridade/portfólio/números foi substituída por uma introdução à metodologia com Cérebro, Coração, Membros e integrações. A ordem dos pilares posteriores foi preservada. Navegação interna usa SectionLink para rolar mantendo a rota hash no GitHub Pages. Nenhuma mídia foi alterada.

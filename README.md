@@ -18,7 +18,7 @@ npm test
 
 Abra a rota `/construcel` no navegador do ambiente de desenvolvimento. O servidor de produção deve fazer fallback das rotas da aplicação para `index.html`. Não usar o servidor Vite de desenvolvimento como produção.
 
-Leia `docs/ARQUITETURA.md` e `docs/BRIEFING.md` antes de desenvolver as próximas fases. As seções 02–10 estão reservadas e não implementadas. Nenhuma integração externa está ativa. SPRINT aparece abaixo da MARATONA após clicar em Liberar SPRINT; esse controle é visual, não autenticação. Proteção efetiva de dados dependerá de backend. Não há pagamentos, assinatura ou onboarding liberados.
+Leia `docs/ARQUITETURA.md` e `docs/BRIEFING.md` antes de desenvolver as próximas fases. As seções 02 e 03 agora apresentam Maike e a metodologia; as seções 04–10 continuam em desenvolvimento com prévias visuais. Nenhuma integração externa está ativa. SPRINT aparece abaixo da MARATONA após clicar em Liberar SPRINT; esse controle é visual, não autenticação. Proteção efetiva de dados dependerá de backend. Não há pagamentos, assinatura ou onboarding liberados.
 
 Configure a data real em `src/config.ts` somente após confirmação. O contador fica desativado enquanto a data não for definida. Nomes de marcas são tipográficos provisórios, não logos oficiais. Não inserir segredos no código ou em variáveis VITE_.
 

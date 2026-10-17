@@ -1,5 +1,5 @@
 const labels = [
- 'Fachada Construcel', 'Maike Christian', 'Produção de campanha', 'Grandes audiências',
+ 'Fachada Construcel', 'Ana Paula — protagonista', 'Maike Christian — direção', 'Grandes audiências',
  'Campanhas e projetos criativos', 'Plano de marketing — 120 páginas', 'Manual de identidade visual',
  'Google Workspace', 'Domínio e hospedagem', 'Site institucional', 'E-commerce',
  'Landing pages de conversão', 'Ana Paula produzindo conteúdo', 'Meta Ads — descoberta',
@@ -12,7 +12,7 @@ const labels = [
  'Reunião e planejamento estratégico',
 ];
 const groups: Record<string, number[]> = {
- 'quem-sou': [2], trajetoria: [3,4,5], cerebro: [6,7,8,9,10,11,12,13,14,15],
+ cerebro: [6,7,8,9,10,11,12,13,14,15],
  coracao: [16,17,18,19,20,21,22], membros: [23,24,25], integracoes: [26,27],
  audiencias: [28,29,30], jornada: [31,32],
 };
