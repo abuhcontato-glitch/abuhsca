@@ -88,3 +88,6 @@ Imagem do card 06 atualizada para mockup editorial de livro e páginas de plano 
 
 ## Manual de identidade — novo mockup
 Card 07 atualizado com mockup editorial de manual, paleta, tipografia e aplicações em papelaria e uniformes, baseado na logo fornecida. Exibição integral sem faixa externa de título. Conteúdo gráfico, códigos de cores e família tipográfica mostrados são demonstrativos e não constituem especificação oficial validada ou manual entregue.
+
+## Site institucional e e-commerce — novos mockups
+Cards 10 e 11 atualizados com imagens demonstrativas baseadas na logo fornecida. Site institucional usa a fachada como referência e foco em orçamento; e-commerce mostra categorias, busca, catálogo e página de produto em múltiplos dispositivos. Exibição integral sem faixas externas. São conceitos visuais; não constituem site corporativo, loja ou checkout efetivamente implementados.
