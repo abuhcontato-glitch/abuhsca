@@ -94,3 +94,6 @@ Cards 10 e 11 atualizados com imagens demonstrativas baseadas na logo fornecida.
 
 ## Landing page — formulário e chatbot
 Card 12 atualizado com mockup demonstrativo focado em conversão: formulário de orçamento no banner principal, CTA e chatbot aberto para dúvidas, com versão móvel. Imagem integral sem faixa de título externa. Formulário e chatbot são elementos visuais da imagem, não novas integrações funcionais da aplicação.
+
+## Produção de Conteúdo
+Card 13 renomeado para Produção de Conteúdo. Imagem substituída por montagem gerada usando a referência de Ana Paula enviada pelo usuário e o retrato fornecido de Maike, com iPhone em gimbal, ring light e lapela. Não é registro documental de produção realizada; texto alternativo identifica montagem demonstrativa. Exibição integral, sem títulos embutidos.
