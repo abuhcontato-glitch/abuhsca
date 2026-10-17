@@ -73,3 +73,6 @@ PNG fornecido no ZIP Logo Construcel Colorido 3D.png.zip aplicado no hero centra
 
 ## Retrato fornecido pelo responsável
 Imagem de Quem sou eu substituída pelo PNG Cinegrafista com câmera ARRI, identificado pelo próprio usuário como seu retrato. Arquivo preservado sem edições em public/media/construcel/maike-christian-arri.png, dimensões intrínsecas e texto alternativo atualizados.
+
+## Recorte das prévias visuais
+As faixas de títulos gravadas nas imagens da galeria foram excluídas da área exibida por recorte CSS: 3% no topo e 17% na base, usando as dimensões reais de cada arquivo. Os originais são preservados. A ampliação passou a usar dialog nativo com o mesmo recorte, fechamento por Escape/botão e retorno de foco, substituindo os links diretos aos PNGs com títulos. Legendas HTML permanecem fora da imagem. Logo e retrato transparente não são recortados.

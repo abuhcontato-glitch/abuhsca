@@ -1,3 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
+import dimensions from './mediaDimensions.json';
+import { X } from 'lucide-react';
+
 const labels = [
  'Fachada Construcel', 'Ana Paula — protagonista', 'Maike Christian — direção', 'Grandes audiências',
  'Campanhas e projetos criativos', 'Plano de marketing — 120 páginas', 'Manual de identidade visual',
@@ -16,15 +20,31 @@ const groups: Record<string, number[]> = {
  coracao: [16,17,18,19,20,21,22], membros: [23,24,25], integracoes: [26,27],
  audiencias: [28,29,30], jornada: [31,32],
 };
+function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
+ const [width, height] = dimensions[String(number) as keyof typeof dimensions];
+ return <div className="media-crop" style={{ aspectRatio: width / (height * .8) }}>
+  <img src={`${import.meta.env.BASE_URL}media/construcel/${String(number).padStart(2,'0')}.png`} alt={`Prévia demonstrativa: ${labels[number-1]}`} width={width} height={height} loading={eager ? 'eager' : 'lazy'} decoding="async"/>
+ </div>;
+}
+
 export function MediaGallery({ section, numbers }: { section?: string; numbers?: number[] }) {
+ const [selected, setSelected] = useState<number | null>(null);
+ const dialog = useRef<HTMLDialogElement>(null);
+ const returnFocus = useRef<HTMLButtonElement | null>(null);
+ useEffect(() => {
+  if (selected !== null) dialog.current?.showModal();
+ }, [selected]);
  const items = numbers ?? groups[section ?? ''] ?? [];
  if (!items.length) return null;
  return <div className={`media-gallery ${items.length === 1 ? 'media-single' : ''}`}>
   <p className="media-disclaimer">PRÉVIAS VISUAIS FORNECIDAS · DEMONSTRAÇÃO CONCEITUAL</p>
   {items.map(number => <figure key={number} className="media-card">
-   <a href={`${import.meta.env.BASE_URL}media/construcel/${String(number).padStart(2,'0')}.png`} target="_blank" rel="noreferrer" aria-label={`Ampliar ${labels[number-1]} (abre em nova aba)`}>
-    <img src={`${import.meta.env.BASE_URL}media/construcel/${String(number).padStart(2,'0')}.png`} alt={`Prévia demonstrativa: ${labels[number-1]}`} width="418" height="235" loading="lazy" decoding="async"/>
-   </a><figcaption><span>{String(number).padStart(2,'0')}</span>{labels[number-1]}</figcaption>
+   <button type="button" className="media-open" aria-label={`Ampliar ${labels[number-1]}`} onClick={event => { returnFocus.current = event.currentTarget; setSelected(number); }}>
+    <CroppedImage number={number}/>
+   </button><figcaption><span>{String(number).padStart(2,'0')}</span>{labels[number-1]}</figcaption>
   </figure>)}
+  <dialog ref={dialog} className="media-dialog" aria-label={selected ? labels[selected-1] : 'Imagem ampliada'} onClose={() => { setSelected(null); returnFocus.current?.focus({ preventScroll: true }); }} onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
+   {selected !== null && <div className="media-dialog-content"><div className="media-dialog-heading"><p>{labels[selected-1]}</p><button type="button" onClick={() => dialog.current?.close()} aria-label="Fechar imagem"><X size={22}/></button></div><CroppedImage number={selected} eager/></div>}
+  </dialog>
  </div>;
 }
