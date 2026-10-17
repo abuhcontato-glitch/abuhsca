@@ -82,3 +82,6 @@ Por solicitação do usuário, o mockup Workspace (card 08) foi substituído por
 
 ## Mockup HostGator
 Card de domínio e hospedagem substituído por representação ilustrativa do site HostGator em iMac e laptop. Imagem gerada identificada como demonstração, sem faixa de título externa; exibição integral inclusive na ampliação. Acesso ao site real foi bloqueado pela rede, portanto não se trata de captura da página atual. Nenhum serviço foi contratado.
+
+## Plano de marketing — novo mockup
+Imagem do card 06 atualizada para mockup editorial de livro e páginas de plano estratégico, utilizando a logo fornecida como referência. Apresentação demonstrativa de 120 páginas, não um documento efetivamente entregue ou diagnóstico validado. Exibição integral, sem faixa de título externa, incluindo na ampliação.
