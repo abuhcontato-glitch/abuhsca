@@ -73,3 +73,6 @@ Validação: dez testes automatizados; build de produção; três documentos e r
 
 ## Sem comparações dentro das propostas
 Por solicitação, as três apresentações e revisões deixam de mostrar comparativos e seletores de outros planos. SPRINT passa a ter nove seções, após remover o bloco de comparação e ajustar a numeração. TRAÇÃO mantém sua seção de escopo sem tabela. MARATONA exibe somente sua reserva de tecnologia. Também foram removidas comparações de preço e de entregas dos textos internos, preservando o aceite de escopo, entregas, extras e honorários próprios. A escolha dos três planos fica exclusivamente na entrada `/construcel`.
+
+## Planos sem calculadoras e pedidos avulsos — atualização vigente
+As calculadoras, catálogos de adicionais e pedidos de orçamento personalizado foram retirados das três propostas e das três páginas de revisão. O card financeiro exibe somente mensalidade, prazo, implantação e total do plano, sem ler quantidades ou seleções anteriores. Mantidas as entregas, exclusões, despesas externas e formalização contratual. O CTA passa a “Revisar proposta”, sem personalização por serviços avulsos.
