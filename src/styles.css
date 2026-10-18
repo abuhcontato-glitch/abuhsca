@@ -55,3 +55,5 @@
 @media(max-width:700px){.media-dialog-content{padding:12px}.media-dialog-heading p{font-size:12px}}
 
 .media-uncropped img{top:0}
+
+.media-service-description{font-size:11px;line-height:1.8;color:var(--color-muted);padding:0 17px 17px;margin:0}

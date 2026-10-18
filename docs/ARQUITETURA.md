@@ -106,3 +106,6 @@ Card 16 atualizado com mockup de dashboard branco/azul e gráficos amarelos/lara
 
 ## SAC comercial — atendimento omnichannel
 Card 17 atualizado para mockup de caixa de entrada unificada, conversa ativa e dados do contato na identidade Construcel. WhatsApp, Instagram e Facebook representados como canais e Google como origem de aquisição, sem alegar chat nativo Google Business disponível. Conversas e contatos são fictícios; integrações não foram implementadas. Imagem integral sem faixa de título externa.
+
+## CRM Kanban, Chatbot e Agente de IA
+CRM atualizado para identidade Construcel. O card combinado Chatbot/IA foi separado: Chatbot apresenta regras, menus e fluxos; Agente de IA apresenta consulta a conhecimento autorizado e apoio supervisionado. Três mockups independentes com descrições HTML, todos demonstrativos. O agente usa ID interno 33 e aparece imediatamente após Chatbot; numeração visual dos cards posteriores ajustada para manter sequência. Nenhuma automação ou integração foi ativada.
