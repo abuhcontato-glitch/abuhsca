@@ -53,3 +53,10 @@ MARATONA: R$ 8.500/mês, 12 meses propostos, implantação proposta R$ 12.000; h
 
 ## Escolha antecipada — após a apresentação
 `ProposalPaths.tsx` oferece LTDA (SPRINT), MARATONA e Calculadora Freelancer entre a apresentação de Maike e a metodologia. SPRINT abre a rota já existente com liberação visual; MARATONA seleciona a operação completa e navega à metodologia; Freelancer abre a mesma calculadora no modo independente, sem honorários ou mensalidade de plano. Sua seleção é separada dos adicionais de SPRINT/MARATONA e permanece ao recolher a calculadora. O resumo freelancer não inclui o valor de nenhum contrato. Uma faixa extra delimita a nova área (dez faixas na principal e nove no SPRINT). `calculateFreelanceQuote` e `freelanceSummary` mantêm cálculos e resumo separados; nove testes automatizados agora aprovados.
+
+## Caminho intermediário TRAÇÃO — substitui o acesso Freelancer
+A análise identificou uma lacuna entre aquisição remota (SPRINT) e operação digital completa (MARATONA): produção original mais rotina de acompanhamento dos orçamentos. O acesso inicial agora apresenta SPRINT → TRAÇÃO → MARATONA. TRAÇÃO abre uma proposta expansível no mesmo ponto da página, com escopo, responsabilidades, duas demonstrações reutilizadas e solicitação para copiar/baixar. A calculadora deixa de ser uma modalidade de entrada e continua sendo utilitário de adicionais na seção de investimento.
+
+Configuração em `tractionOffer` de `config.ts`; apresentação e resumo em `TractionOffer.tsx`; `ProposalPaths.tsx` reutiliza o mesmo card. `CommercialRequest` aceita resumo específico e nome de arquivo, sem herdar plano/mensalidade. Não há preço, total ou implantação inventados: todos pendentes de proposta formal. Volumes e prazo são explicitamente propostos; precisam de validação de capacidade e aceite. O seletor financeiro continua contendo as duas ofertas com honorários definidos. O orçamento TRAÇÃO é tratado separadamente até seu preço ser aprovado.
+
+Build e nove testes passaram. Browser validou as três entradas, escopo proposto, ausência de valores de outros planos no resumo TRAÇÃO, cópia, download, galeria/modal, navegação e 320/390/768/1440 px.

@@ -29,3 +29,8 @@ Mídia, hospedagem, CRM pago e licenças são despesas externas da Construcel, o
 
 ## Personalização interativa
 Os honorários acima permanecem como base. Adicionais explicitamente selecionados são separados em avulsos e recorrentes; os serviços incluídos só podem gerar seleção de volume extra. Sem tabela aprovada, os serviços avulsos ficam “Sob orçamento” e não entram nos totais numéricos. O resumo para copiar/baixar é uma solicitação comercial, sem envio, contratação ou cobrança automática. Veja `INTERATIVIDADE-COMERCIAL.md`.
+
+## Nova alternativa proposta: TRAÇÃO — Marketing e Vendas
+Substitui a Calculadora Freelancer como caminho inicial. É uma oferta intermediária em dimensionamento, não uma terceira mensalidade já aprovada. Inclui a aquisição do SPRINT e acrescenta uma sessão presencial mensal, quatro vídeos curtos dentro dos oito criativos mensais, 16 publicações Instagram no lugar das oito, adaptação dos quatro vídeos ao TikTok, rotina comercial no CRM básico, treinamento remoto inicial e duas reuniões mensais. Proposta de seis meses; preço, implantação e condições pendentes de dimensionamento e aceite. Site/e-commerce completo, IA, CRM avançado, branding extenso, EAD e gestão de departamentos ficam fora. Não altera valores nem entregas de SPRINT/MARATONA.
+
+A Construcel continua responsável por atender, atualizar orçamentos e fechar vendas. A ABUHSCA produz, anuncia e organiza acompanhamento, sem assumir equipe de vendas ou prometer resultados. O resumo TRAÇÃO não soma os honorários de outro plano. A calculadora de adicionais permanece como ferramenta de personalização na seção comercial, sem ser uma modalidade da metodologia.

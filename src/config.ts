@@ -88,3 +88,19 @@ export const sections = [
   { id: 'jornada', title: 'Da estratégia à execução.', pillar: 'Como vai funcionar.' },
   { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — OPERAÇÃO 360°.' },
 ];
+
+// Nova alternativa intermediária: preço e condições ainda precisam de aprovação.
+export const tractionOffer = {
+ name: 'TRAÇÃO — Marketing e Vendas',
+ tagline: 'Mais conteúdo original e acompanhamento comercial para aproveitar as oportunidades geradas.',
+ priceStatus: 'Sob proposta',
+ proposedMonths: 6,
+ deliverables: [
+  {title:'Aquisição',items:['Todos os serviços do SPRINT revisado: Meta Ads e Google Ads, até 2 campanhas ativas por plataforma, landing page, Google Perfil da Empresa, WhatsApp organizado e CRM básico.','Monitoramento e otimização semanal das campanhas. Verba de mídia separada.']},
+  {title:'Conteúdo original',items:['1 sessão presencial de captação por mês, programada com a Construcel.','Roteiro, gravação e edição de 4 vídeos curtos originais por mês. Esses vídeos compõem os 8 criativos publicitários mensais; não são 8 criativos mais 4 vídeos.','16 publicações mensais no Instagram, substituindo as 8 do SPRINT e reaproveitando campanhas e captações.','Adaptação dos 4 vídeos já produzidos para o TikTok, sem uma produção independente adicional.']},
+  {title:'Organização comercial',items:['CRM básico com responsáveis, próximos passos e rotina de acompanhamento dos orçamentos.','Roteiro de atendimento e follow-up, com 1 treinamento remoto inicial para a equipe.','2 reuniões de acompanhamento por mês, substituindo a reunião mensal do SPRINT.','Painel básico de campanhas, leads e andamento dos orçamentos, conforme os dados fornecidos.']},
+ ],
+ exclusions:['Site institucional completo, e-commerce, checkout e cadastro de produtos.','CRM avançado, integrações personalizadas, chatbots e agentes de IA.','Branding completo, plano de marketing extenso, gestão dos departamentos e Universidade / EAD.','Reuniões semanais, produção ilimitada e equipe dedicada em tempo integral.'],
+ responsibilities:'A ABUHSCA organiza campanhas, produção e acompanhamento. A equipe da Construcel atende os leads, atualiza os orçamentos no CRM e conduz a negociação e o fechamento das vendas.',
+ conditions:'Escopo proposto, sujeito à validação da capacidade de entrega e ao aceite de Ana Paula. Prazo sugerido de 6 meses. Mensalidade, implantação, duração das captações, deslocamentos e cronograma serão dimensionados na proposta formal. Não há valor contratual definido nem promessa de leads, vendas ou faturamento.',
+};
