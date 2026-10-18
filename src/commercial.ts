@@ -1,7 +1,7 @@
 import { proposal } from './config.ts';
 
-export type PlanId = 'sprint' | 'tracao' | 'maratona';
-export const planLabel=(id:PlanId)=>({sprint:'SPRINT',tracao:'TRAÇÃO',maratona:'MARATONA'})[id];
+export type PlanId = 'base' | 'arranque' | 'sprint' | 'tracao' | 'maratona';
+export const planLabel=(id:PlanId)=>({base:'BASE',arranque:'ARRANQUE',sprint:'SPRINT',tracao:'TRAÇÃO',maratona:'MARATONA'})[id];
 export type Availability = { included: string | null; note: string };
 export type Service = {
  id: string; category: string; name: string; description: string; unit: string;
@@ -17,10 +17,11 @@ const tractionAllowances: Record<string,string> = {
  art:'Dentro dos 8 criativos/mês',carousel:'Dentro dos 8 criativos/mês',reels:'4 vídeos curtos dentro dos 8 criativos/mês',
  'ad-video':'4 vídeos curtos dentro dos 8 criativos/mês',capture:'1 sessão presencial/mês',
  'full-video':'4 vídeos curtos/mês; outros formatos exigem escopo adicional',landing:'1 página no primeiro mês',
+ site:'Site oficial institucional responsivo',chatbot:'Chatbot com fluxos de atendimento',
  campaign:'Até 2 campanhas ativas por plataforma',content:'16 publicações Instagram/mês e adaptação de 4 vídeos ao TikTok',
  consulting:'2 reuniões de acompanhamento/mês',diagnosis:'Diagnóstico comercial inicial',
 };
-const service = (id: string, category: string, name: string, description: string, unit: string, sprint: Availability, maratona = mar, billing: Service['billing'] = 'once'): Service => ({id,category,name,description,unit,billing,unitPrice:null,availability:{sprint,tracao:tractionAllowances[id]?rule(tractionAllowances[id],extra):none,maratona}});
+const service = (id: string, category: string, name: string, description: string, unit: string, sprint: Availability, maratona = mar, billing: Service['billing'] = 'once'): Service => ({id,category,name,description,unit,billing,unitPrice:null,availability:{base:id==='consulting'||id==='diagnosis'?rule('Orientação dentro da reunião mensal; sem execução',extra):none,arranque:['art','ad-video','campaign','consulting'].includes(id)?rule('Conforme limites do ARRANQUE',extra):none,sprint,tracao:tractionAllowances[id]?rule(tractionAllowances[id],extra):none,maratona}});
 // Preencher unitPrice somente com tabela aprovada. Null nunca equivale a serviço gratuito.
 export const serviceCatalog: Service[] = [
  service('art','Design','Arte publicitária','Peça estática para divulgação.','peça',rule('Dentro dos 8 criativos/mês',extra)),
@@ -31,7 +32,7 @@ export const serviceCatalog: Service[] = [
  service('ad-video','Audiovisual','Edição de vídeo publicitário','Montagem e acabamento de vídeo para anúncios.','vídeo',rule('Edição simples dentro dos 8 criativos/mês',extra)),
  service('capture','Audiovisual','Captação presencial','Visita para gravar imagens e conteúdo.','visita',none),
  service('full-video','Audiovisual','Produção de vídeo completo','Roteiro, produção, captação e edição a dimensionar.','projeto',none),
- service('landing','Web','Landing page','Página comercial de captação.','página',rule('1 página no primeiro mês',extra)),
+ service('landing','Web','Landing page','Página comercial de captação.','página',rule('Landing pages conforme quantidade e cronograma acordados',extra)),
  service('site','Web','Site institucional','Presença institucional e páginas a dimensionar.','projeto',none),
  service('ecommerce','Web','E-commerce','Loja, catálogo, checkout e integrações a dimensionar.','projeto',none),
  service('page','Web','Página adicional','Ampliação de uma estrutura web existente.','página',none),
@@ -65,7 +66,7 @@ export function commercialSummary(plan: PlanId, quantities: Quantities, catalog:
  const offer=proposal[plan], quote=calculateQuote(plan,quantities,catalog);
  return [
   'SOLICITAÇÃO COMERCIAL — NÃO É CONTRATO',`Cliente: ${proposal.company}`,`Agência: ${proposal.agency}`,`Plano escolhido: ${offer.name}`,
-  `Mensalidade do plano: ${money(offer.monthly)}`,`Prazo proposto: ${plan==='sprint'?'90 dias / 3 mensalidades':`${offer.months} meses`}`,
+  `Mensalidade do plano: ${money(offer.monthly)}`,`Prazo proposto: ${plan==='sprint'?'90 dias / 3 mensalidades':`${offer.months} ${offer.months===1?'mês inicial proposto':'meses'}`}`,
   `Implantação: ${plan!=='maratona'?'sem taxa adicional para landing page e CRM simples e padronizados':money(offer.setup)+' — proposta'}`,
   `Total de honorários do plano: ${money(quote.baseTotal)}`,
   'Serviços adicionais (somente volume além do incluído):',
@@ -86,19 +87,19 @@ export type ComparisonRow = {name:string; values:Record<PlanId,{status:'Incluíd
 const tractionComparisons: Record<string,string|null> = {
  'Tráfego pago':'Meta + Google · até 2 campanhas ativas por plataforma; otimização semanal',
  Criativos:'8/mês, incluindo os 4 vídeos curtos originais',Instagram:'16 publicações/mês',TikTok:'Adaptação dos 4 vídeos/mês',
- 'Landing page':'1 no primeiro mês','Site institucional':null,'E-commerce':null,
+ 'Landing page':'1 no primeiro mês','Site institucional':'Site oficial institucional responsivo','E-commerce':null,
  'Produção audiovisual':'1 sessão presencial/mês e 4 vídeos curtos dentro dos 8 criativos',
- CRM:'Básico, responsáveis, próximos passos e rotina de follow-up',Chatbot:null,'Agentes de IA':null,
+ CRM:'Básico, responsáveis, próximos passos e rotina de follow-up',Chatbot:'Fluxos de atendimento e encaminhamento à equipe','Agentes de IA':null,
  Reuniões:'2 por mês',Treinamentos:'1 remoto inicial',Branding:null,
  'Plano de marketing':'Diagnóstico comercial, planejamento de campanhas e conteúdo',Automações:null,
  Dashboards:'Painel básico de campanhas, leads e orçamentos','Universidade Construcel':null,
 };
-const row=(name:string,sprint:string|null,maratona:string):ComparisonRow=>({name,values:{tracao:{status:tractionComparisons[name]?'Incluído':'Disponível como adicional',detail:tractionComparisons[name]??'Não incluído no plano · Sob orçamento'},sprint:{status:sprint?'Incluído':'Disponível como adicional',detail:sprint??'Não incluído no plano · Sob orçamento'},maratona:{status:'Incluído',detail:maratona}}});
+const row=(name:string,sprint:string|null,maratona:string):ComparisonRow=>({name,values:{base:{status:'Sob orçamento',detail:'Conforme escopo da BASE'},arranque:{status:'Sob orçamento',detail:'Conforme escopo do ARRANQUE'},tracao:{status:tractionComparisons[name]?'Incluído':'Disponível como adicional',detail:tractionComparisons[name]??'Não incluído no plano · Sob orçamento'},sprint:{status:sprint?'Incluído':'Disponível como adicional',detail:sprint??'Não incluído no plano · Sob orçamento'},maratona:{status:'Incluído',detail:maratona}}});
 export const comparisonRows: ComparisonRow[] = [
  row('Tráfego pago','Meta + Google · até 2 campanhas ativas por plataforma; otimização semanal','Meta + Google · conforme planejamento'),
  row('Criativos','8/mês · estáticos, carrosséis ou edição simples','20 · periodicidade a definir'),
  row('Instagram','8 publicações/mês, reaproveitando campanhas','24 publicações/mês, feed e Stories'),
- row('TikTok',null,'24 publicações/mês'),row('Landing page','1 no primeiro mês','Páginas conforme planejamento'),
+ row('TikTok',null,'24 publicações/mês'),row('Landing page','Landing pages conforme escopo','Páginas conforme planejamento'),
  row('Site institucional',null,'Site responsivo e evolução'),row('E-commerce',null,'Catálogo, carrinho, checkout e integração de pagamento'),
  row('Produção audiovisual','Remota · edição simples de vídeos da cliente; presencial à parte','Visita, roteiro, captação e edição conforme escopo'),
  row('CRM','Básico: leads e orçamentos','Avançado, funis e integrações'),row('Chatbot',null,'Fluxos e evolução conforme projeto'),

@@ -57,3 +57,13 @@ test('TRAÇÃO has its own six-month contract, allowances and quote summary',()=
  assert.match(serviceCatalog.find(service=>service.id==='content').availability.tracao.included,/16/);
  const summary=commercialSummary('tracao',{capture:1});assert.match(summary,/6 meses/);assert.match(summary,/33.000/);assert(!summary.includes('114.000'));assert(!summary.includes('7.500'));assert.match(summary,/TRAÇÃO/);
 });
+
+test('entry plans have separate monthly cycle totals and bounded deliverables',async()=>{
+ const {proposal}=await import('../src/config.ts');
+ assert.equal(calculateQuote('base',{}).baseTotal,500);assert.equal(calculateQuote('arranque',{}).baseTotal,1500);
+ assert.equal(proposal.base.months,1);assert.equal(proposal.arranque.months,1);
+ assert.match(proposal.base.monthlyDeliverables.join(' '),/45 minutos/);assert.match(proposal.arranque.monthlyDeliverables.join(' '),/1 campanha ativa/);
+ assert.match(proposal.tracao.setupDeliverables.join(' '),/Site oficial/);assert.match(proposal.tracao.setupDeliverables.join(' '),/Chatbot/);
+ assert(!proposal.tracao.exclusions.join(' ').includes('chatbots'));assert(!proposal.tracao.exclusions.join(' ').includes('Site institucional'));
+ assert.match(proposal.maratona.setupDeliverables.join(' '),/E-commerce|e-commerce|loja virtual/);
+});

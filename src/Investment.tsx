@@ -17,17 +17,18 @@ function OfferValidity() {
 export function PriceSummary({ checkout = false, appearance = 'maratona' }: {checkout?: boolean; appearance?: 'maratona'|'sprint'}) {
  const {plan}=useCommercial(), offer=proposal[plan], sprintStyle=appearance==='sprint';
  return <aside className={sprintStyle?'sprint-price':'maratona-card'} aria-label={`Resumo do investimento ${plan.toUpperCase()}`}>
-  <div className="maratona-card-top"><span className="offer-badge">{plan==='sprint'?'OPÇÃO 01 · OPERAÇÃO COMERCIAL':plan==='tracao'?'OPÇÃO 02 · MARKETING E VENDAS':'OPÇÃO 03 · OPERAÇÃO COMPLETA'}</span><Layers3 size={25} strokeWidth={1.4}/></div>
+  <div className="maratona-card-top"><span className="offer-badge">{offer.name}</span><Layers3 size={25} strokeWidth={1.4}/></div>
   <h3>{offer.name}</h3><p className="maratona-tagline">{offer.tagline}</p>
   <p className={sprintStyle?'sprint-monthly':'maratona-price'}>{money(offer.monthly)}<span>/mês</span></p>
   <QuoteFinancialDetails/>
   {checkout ? <><button className="primary-button maratona-disabled" type="button" disabled><LockKeyhole size={16}/>Assinatura e pagamento em preparação</button><p className="checkout-pending">Revisão e solicitação comercial. Nenhuma contratação ou cobrança é realizada aqui.</p></> : <Link className="primary-button maratona-cta" to={`/construcel/contratacao/${plan}`}>Revisar proposta <ArrowUpRight size={20}/></Link>}
-  <div className="offer-assurance"><ShieldCheck size={17}/><span>Escolha sujeita à negociação e formalização em contrato.</span></div><OfferValidity/><TechnologyBudget offer={plan}/>
+  <div className="offer-assurance"><ShieldCheck size={17}/><span>Escolha sujeita à negociação e formalização em contrato.</span></div><OfferValidity/>{(plan==='sprint'||plan==='tracao'||plan==='maratona')&&<TechnologyBudget offer={plan}/>}
  </aside>;
 }
 export function OfferConditions() {
  const {plan}=useCommercial();
  if(plan==='tracao')return <TractionConditions/>;
+ if(plan==='base'||plan==='arranque')return <div className="offer-conditions"><h3>Condições deste plano</h3><p>Ciclo inicial proposto de 30 dias. Continuidade e condições serão combinadas antes da contratação. A execução e os limites são somente os descritos nesta proposta.</p><p>Verba de mídia, licenças e serviços de terceiros não estão incluídos e dependem de aprovação. Não há promessa de leads, vendas ou faturamento, nem contratação ou cobrança automática.</p><CommercialAlignment/></div>;
  return <div className="offer-conditions"><h3>Condições e despesas adicionais</h3><p>Os honorários remuneram os serviços, a direção, a gestão e a equipe mobilizada pela ABUHSCA para executar o escopo contratado.</p><p>Não estão incluídos, salvo previsão expressa em contrato:</p><ul>{proposal.externalCosts.map(cost=><li key={cost}>{cost}</li>)}</ul><p>Os custos externos devem ser previamente orçados e aprovados pela contratante. A equipe necessária ao escopo contratado não representa uma cobrança adicional automática.</p><p>Estas são condições comerciais propostas, não uma validação de rentabilidade nem cotações verificadas do mercado de Brasília. Antes da assinatura, a MARATONA exige auditoria do catálogo e orçamento real de produção, IA e integrações, com avaliação de custos, impostos e capacidade de entrega.</p><p>As demonstrações representam implantação prevista, desenvolvimento progressivo ou escopo técnico adicional; não são sistemas já entregues. “Escopo técnico adicional” identifica aprofundamento a dimensionar dentro da MARATONA, sem cobrança automática. A implantação será progressiva, conforme cronograma e dependências técnicas acordadas. O levantamento inicial definirá o volume do catálogo, integrações necessárias e responsabilidades pelo fornecimento de informações e acessos. Implantação e custos externos serão explicados e negociados previamente com Ana Paula.</p><p>Não há garantia de quantidade específica de leads, vendas ou faturamento.</p><CommercialAlignment/></div>;
 }
 export function InvestmentSection() {

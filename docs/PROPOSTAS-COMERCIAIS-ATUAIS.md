@@ -40,3 +40,13 @@ A TRAÇÃO passa a ser oferecida por **R$ 5.500/mês**, valor intermediário ent
 
 ## Apresentações independentes
 Os três preços e escopos possuem documentos individuais: `/construcel/sprint`, `/construcel/tracao` e `/construcel/maratona`. A entrada `/construcel` é somente apresentação e escolha. A troca no seletor/comparativo abre a respectiva proposta; os adicionais e os totais contratuais permanecem separados. Revisões também são individuais, sem cobrança automática.
+
+## Cinco níveis de atendimento — atualização vigente
+- BASE: R$ 500/mês. Orientação remota: uma sessão de até 45 minutos, prioridades e revisão de informações da cliente. A Construcel executa; sem anúncios, produção, páginas ou sistemas.
+- ARRANQUE: R$ 1.500/mês. Meta Ads com até uma campanha ativa, quatro criativos simples de materiais da cliente, otimização semanal, relatório e uma reunião de até 30 minutos. Sem Google Ads, produção original, posts recorrentes, páginas ou sistemas.
+- BASE e ARRANQUE: ciclo inicial proposto de 30 dias (honorários R$ 500 / R$ 1.500), implantação zero; continuidade e condições a combinar. Os escopos e o ciclo são propostas, sujeitos ao aceite. Verba de mídia fora dos honorários.
+- SPRINT: R$ 2.500/mês por 90 dias. Landing pages de captação incluídas, com quantidade e cronograma definidos no alinhamento de escopo. Sem site institucional, e-commerce, chatbot ou agente de IA.
+- TRAÇÃO: R$ 5.500/mês por seis meses. Landing page, site oficial institucional e chatbot com fluxos incluídos, além das demais entregas. Sem e-commerce ou agente de IA.
+- MARATONA: R$ 8.500/mês por 12 meses, implantação proposta de R$ 12.000. Landing page, site, e-commerce, chatbot e agente de IA, além do restante da operação completa.
+
+Cada oferta tem página e revisão próprias. Calculadoras e comparativos continuam ausentes. A descrição nova de estrutura digital substitui as exclusões anteriores de site/chatbot na TRAÇÃO.

@@ -85,3 +85,4 @@
 .plan-options{grid-template-columns:repeat(3,minmax(0,1fr))}.interactive-comparison{min-width:1000px}.plan-option>strong{font-size:28px}.plan-option-heading{flex-wrap:wrap}.plan-option{overflow-wrap:anywhere}
 @media(max-width:900px){.plan-options{grid-template-columns:1fr}}
 @media(max-width:700px){.sprint-document[data-proposal="tracao"] .sprint-document-hero h1{font-size:23vw}}
+@media(max-width:700px){.sprint-document[data-proposal="arranque"] .sprint-document-hero h1{font-size:17vw}}
