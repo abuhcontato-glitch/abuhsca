@@ -100,3 +100,6 @@ Card 13 renomeado para Produção de Conteúdo. Imagem substituída por montagem
 
 ## Meta Ads e Google Ads — novos mockups
 Cards 14 e 15 atualizados para demonstrações de anúncios sociais no Instagram/Facebook e anúncios de pesquisa no Google, respectivamente. Meta usa a montagem de produção como referência de Ana Paula. Exibição integral sem faixa de título. Não são campanhas ativas, capturas de contas reais ou resultados comerciais comprovados.
+
+## Dashboard comercial — identidade Construcel
+Card 16 atualizado com mockup de dashboard branco/azul e gráficos amarelos/laranja, usando a logo como referência. KPIs, canais, funil e equipe exibidos são dados fictícios explicitamente identificados na imagem. Não há sistema comercial implantado, conexão de dados ou comprovação de resultados. Exibição integral sem faixa externa de título.
