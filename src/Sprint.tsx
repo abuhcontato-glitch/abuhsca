@@ -6,6 +6,7 @@ import { SectionLink } from './Presentation';
 import { TechnologyBudget } from './Technology';
 import { CommercialAlignment } from './CommercialAlignment';
 import { MediaGallery } from './MediaGallery';
+import { SectionTape } from './SectionTape';
 
 function SprintDeliverables() {
  return <div className="offer-deliverables">{[['Implantação prevista',proposal.sprint.setupDeliverables],['Gestão mensal',proposal.sprint.monthlyDeliverables]].map(([title,items])=><div className="offer-deliverable-group" key={title as string}><h3>{title as string}</h3><ul className="sprint-scope">{(items as string[]).map(item=><li key={item}><Check size={15}/>{item}</li>)}</ul></div>)}</div>;
@@ -50,7 +51,7 @@ export function SprintRelease() {
  const [released,setReleased]=useState(false);
  return <div className="sprint-release"><div className="release-bar"><div><p className="eyebrow">UMA ALTERNATIVA PARA COMEÇAR</p><p>Primeiro, as prioridades comerciais.</p></div><button type="button" className="release-button" aria-expanded={released} aria-controls="sprint-offer" onClick={()=>setReleased(!released)}>{released?'Recolher SPRINT':'Liberar SPRINT'}{released?<Minus size={18}/>:<Plus size={18}/>}</button></div>{released&&<div id="sprint-offer"><SprintOffer/></div>}</div>;
 }
-function SprintBlock({id,index,title,eyebrow,children}:{id:string;index:number;title:string;eyebrow:string;children:ReactNode}) {return <section id={id} className="sprint-content-section"><div className="section-number">{String(index).padStart(2,'0')} / 10 · SPRINT</div><div className="sprint-block-heading"><p className="eyebrow">{eyebrow}</p><h2>{title}</h2></div>{children}</section>;}
+function SprintBlock({id,index,title,eyebrow,children}:{id:string;index:number;title:string;eyebrow:string;children:ReactNode}) {return <><SectionTape/><section id={id} className="sprint-content-section"><div className="section-number">{String(index).padStart(2,'0')} / 10 · SPRINT</div><div className="sprint-block-heading"><p className="eyebrow">{eyebrow}</p><h2>{title}</h2></div>{children}</section></>;}
 function SprintMedia({file,alt}:{file:string;alt:string}) {return <figure className="sprint-media"><img src={media(file)} alt={alt} loading="lazy" decoding="async" width="1672" height="941"/><figcaption>VISUAL DEMONSTRATIVO · SERVIÇOS PREVISTOS NO ESCOPO</figcaption></figure>;}
 function SprintDocument() {
  useEffect(()=>{window.scrollTo({top:0,behavior:'instant'});},[]);
