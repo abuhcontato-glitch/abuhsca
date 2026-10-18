@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { proposal, sections } from './config';
 import { expirationDate } from './dates';
+import { TechnologyBudget } from './Technology';
 
 const money = (value: number) => value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', maximumFractionDigits: 0});
 function OfferDeliverables() {
@@ -24,7 +25,7 @@ function PriceSummary({ checkout = false }: {checkout?: boolean}) {
   <dl className="maratona-breakdown"><div><dt>Implantação inicial</dt><dd>{money(offer.setup)}</dd></div><div><dt>Contrato</dt><dd>{offer.months} meses</dd></div><div className="maratona-total"><dt>Total contratual</dt><dd>{money(total)}</dd></div></dl>
   <p className="maratona-calculation">{money(offer.setup)} de implantação + {offer.months} mensalidades de {money(offer.monthly)}. Custos externos não incluídos.</p>
   {checkout ? <><button className="primary-button maratona-disabled" type="button" disabled><LockKeyhole size={16}/>Assinatura e pagamento em preparação</button><p className="checkout-pending">Esta etapa permite revisar a oferta. Contrato eletrônico, assinatura e gateway ainda precisam ser integrados. Nenhuma contratação ou cobrança é realizada aqui.</p></> : <Link className="primary-button maratona-cta" to="/construcel/contratacao/maratona">Quero aproveitar esta oferta <ArrowUpRight size={20}/></Link>}
-  <div className="offer-assurance"><ShieldCheck size={17}/><span>Escopo e condições formalizados em contrato.</span></div><OfferValidity/>
+  <div className="offer-assurance"><ShieldCheck size={17}/><span>Escopo e condições formalizados em contrato.</span></div><OfferValidity/><TechnologyBudget offer="maratona"/>
  </aside>;
 }
 function OfferConditions() {

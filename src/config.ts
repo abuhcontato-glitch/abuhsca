@@ -14,14 +14,14 @@ export const proposal = {
     instagramPosts: 24, tiktokPosts: 24, adCreatives: 20, monthlyVisits: 1, initialTraining: 1,
     setupDeliverables: [
       'Diagnóstico estratégico e planejamento de marketing.',
-      'Site institucional responsivo.',
+      'Site institucional responsivo, com plataforma definida após o levantamento técnico.',
       'E-commerce com catálogo, carrinho, checkout e integração de pagamento.',
       'Importação do catálogo de produtos conforme levantamento técnico e cronograma aprovado.',
       'Configuração de Google Ads e Meta Ads.',
-      'Configuração de mensuração e indicadores.',
-      'Implantação de CRM e funil comercial.',
+      'Configuração de GA4, Tag Manager, rastreamento de conversões e indicadores.',
+      'Implantação de CRM estruturado e funil comercial, com usuários e permissões.',
       'Organização dos processos de atendimento e acompanhamento de orçamentos.',
-      'Configuração de chatbot e agente conversacional de IA.',
+      'Configuração de chatbot, automação e agente conversacional de IA conectado à base de conhecimento autorizada.',
       'Um treinamento presencial inicial para a equipe.',
     ],
     monthlyDeliverables: [
@@ -49,6 +49,8 @@ export const proposal = {
       'Organização básica do WhatsApp Business.',
       'Implantação de um CRM simplificado com um funil comercial.',
       'Ajustes estratégicos no perfil do Instagram.',
+      'GA4, Tag Manager e rastreamento de conversões.',
+      'Dashboard de campanhas.',
     ],
     monthlyDeliverables: [
       'Gestão e otimização de campanhas Google Ads e Meta Ads.',
