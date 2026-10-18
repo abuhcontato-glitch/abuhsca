@@ -112,3 +112,6 @@ CRM atualizado para identidade Construcel. O card combinado Chatbot/IA foi separ
 
 ## E-mail marketing — identidade Construcel
 Mockup atualizado com configuração de campanha, segmentação, fluxo de relacionamento e prévia responsiva de newsletter. Imagem demonstrativa com logo e paleta Construcel, sem faixa de título externa. Nenhuma mensagem foi enviada, campanha ativada ou base de contatos integrada.
+
+## Treinamento comercial com Maike
+Imagem de treinamento atualizada para montagem demonstrativa com Maike como instrutor, usando seu retrato fornecido como referência. Equipe e cena são ilustrativas, não comprovação de treinamento realizado. Texto alternativo identifica a montagem; imagem integral sem faixa externa.
