@@ -103,3 +103,6 @@ Cards 14 e 15 atualizados para demonstrações de anúncios sociais no Instagram
 
 ## Dashboard comercial — identidade Construcel
 Card 16 atualizado com mockup de dashboard branco/azul e gráficos amarelos/laranja, usando a logo como referência. KPIs, canais, funil e equipe exibidos são dados fictícios explicitamente identificados na imagem. Não há sistema comercial implantado, conexão de dados ou comprovação de resultados. Exibição integral sem faixa externa de título.
+
+## SAC comercial — atendimento omnichannel
+Card 17 atualizado para mockup de caixa de entrada unificada, conversa ativa e dados do contato na identidade Construcel. WhatsApp, Instagram e Facebook representados como canais e Google como origem de aquisição, sem alegar chat nativo Google Business disponível. Conversas e contatos são fictícios; integrações não foram implementadas. Imagem integral sem faixa de título externa.

@@ -7,7 +7,7 @@ const labels = [
  'Campanhas e projetos criativos', 'Plano de marketing — 120 páginas', 'Manual de identidade visual',
  'Google Meu Negócio — Perfil da Empresa', 'Domínio e hospedagem — HostGator', 'Site institucional', 'E-commerce',
  'Landing pages de conversão', 'Produção de Conteúdo', 'Meta Ads — descoberta',
- 'Google Ads — intenção de compra', 'Dashboard comercial', 'SAC 360 — omnichannel',
+ 'Google Ads — intenção de compra', 'Dashboard comercial', 'SAC comercial — Atendimento omnichannel',
  'CRM — Kanban de vendas', 'Chatbots e agentes de IA', 'E-mail marketing e relacionamento',
  'Treinamento de vendedores', 'Universidade Construcel — EAD', 'Gestão de projetos e produtividade',
  'Base de conhecimento e biblioteca digital', 'Gestão financeira e indicadores',
@@ -22,7 +22,7 @@ const groups: Record<string, number[]> = {
 };
 function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
  const [width, height] = dimensions[String(number) as keyof typeof dimensions];
- const replacements: Record<number, string> = { 6: 'plano-marketing-construcel.png', 7: 'manual-identidade-construcel.png', 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png', 10: 'site-institucional-construcel.png', 11: 'ecommerce-construcel.png', 12: 'landingpage-formulario-chatbot.png', 13: 'producao-conteudo-ana-paula-maike.png', 14: 'meta-ads-construcel.png', 15: 'google-ads-construcel.png', 16: 'dashboard-comercial-construcel.png' };
+ const replacements: Record<number, string> = { 6: 'plano-marketing-construcel.png', 7: 'manual-identidade-construcel.png', 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png', 10: 'site-institucional-construcel.png', 11: 'ecommerce-construcel.png', 12: 'landingpage-formulario-chatbot.png', 13: 'producao-conteudo-ana-paula-maike.png', 14: 'meta-ads-construcel.png', 15: 'google-ads-construcel.png', 16: 'dashboard-comercial-construcel.png', 17: 'atendimento-omnichannel-construcel.png' };
  const imageFile = replacements[number] ?? `${String(number).padStart(2,'0')}.png`;
  const uncropped = number in replacements;
  return <div className={`media-crop ${uncropped ? 'media-uncropped' : ''}`} style={{ aspectRatio: width / (height * (uncropped ? 1 : .8)) }}>
