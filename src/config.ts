@@ -89,11 +89,11 @@ export const sections = [
   { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — OPERAÇÃO 360°.' },
 ];
 
-// Nova alternativa intermediária: preço e condições ainda precisam de aprovação.
+// Alternativa intermediária: valores propostos, sujeitos ao aceite comercial.
 export const tractionOffer = {
  name: 'TRAÇÃO — Marketing e Vendas',
  tagline: 'Mais conteúdo original e acompanhamento comercial para aproveitar as oportunidades geradas.',
- priceStatus: 'Sob proposta',
+ monthly: 5500, setup: 0,
  proposedMonths: 6,
  deliverables: [
   {title:'Aquisição',items:['Todos os serviços do SPRINT revisado: Meta Ads e Google Ads, até 2 campanhas ativas por plataforma, landing page, Google Perfil da Empresa, WhatsApp organizado e CRM básico.','Monitoramento e otimização semanal das campanhas. Verba de mídia separada.']},
@@ -102,5 +102,5 @@ export const tractionOffer = {
  ],
  exclusions:['Site institucional completo, e-commerce, checkout e cadastro de produtos.','CRM avançado, integrações personalizadas, chatbots e agentes de IA.','Branding completo, plano de marketing extenso, gestão dos departamentos e Universidade / EAD.','Reuniões semanais, produção ilimitada e equipe dedicada em tempo integral.'],
  responsibilities:'A ABUHSCA organiza campanhas, produção e acompanhamento. A equipe da Construcel atende os leads, atualiza os orçamentos no CRM e conduz a negociação e o fechamento das vendas.',
- conditions:'Escopo proposto, sujeito à validação da capacidade de entrega e ao aceite de Ana Paula. Prazo sugerido de 6 meses. Mensalidade, implantação, duração das captações, deslocamentos e cronograma serão dimensionados na proposta formal. Não há valor contratual definido nem promessa de leads, vendas ou faturamento.',
+ conditions:'Escopo proposto, sujeito à validação da capacidade de entrega e ao aceite de Ana Paula. Prazo sugerido de 6 meses. Honorários de R$ 5.500/mês, sem implantação adicional para landing page e CRM simples e padronizados. Duração das captações, deslocamentos e cronograma serão definidos na formalização do escopo. Não há promessa de leads, vendas ou faturamento.',
 };

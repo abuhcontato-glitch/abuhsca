@@ -60,3 +60,6 @@ A análise identificou uma lacuna entre aquisição remota (SPRINT) e operação
 Configuração em `tractionOffer` de `config.ts`; apresentação e resumo em `TractionOffer.tsx`; `ProposalPaths.tsx` reutiliza o mesmo card. `CommercialRequest` aceita resumo específico e nome de arquivo, sem herdar plano/mensalidade. Não há preço, total ou implantação inventados: todos pendentes de proposta formal. Volumes e prazo são explicitamente propostos; precisam de validação de capacidade e aceite. O seletor financeiro continua contendo as duas ofertas com honorários definidos. O orçamento TRAÇÃO é tratado separadamente até seu preço ser aprovado.
 
 Build e nove testes passaram. Browser validou as três entradas, escopo proposto, ausência de valores de outros planos no resumo TRAÇÃO, cópia, download, galeria/modal, navegação e 320/390/768/1440 px.
+
+### Atualização de preço TRAÇÃO
+Mensalidade centralizada em `tractionOffer.monthly`: R$ 5.500; seis meses propostos; implantação adicional zero para landing/CRM simples e padronizados; honorários R$ 33.000. Card, detalhes e resumo de solicitação usam os mesmos dados. Substitui a indicação anterior “Sob proposta”; despesas externas e aceite continuam separados.

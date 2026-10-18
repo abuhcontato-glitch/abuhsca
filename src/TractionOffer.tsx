@@ -2,10 +2,11 @@ import { Check } from 'lucide-react';
 import { proposal, tractionOffer } from './config';
 import { MediaGallery } from './MediaGallery';
 import { CommercialRequest } from './CommercialExperience';
+import { money } from './commercial';
 
 export function tractionSummary() {
  return ['SOLICITAÇÃO DE PROPOSTA — TRAÇÃO',`Cliente: ${proposal.company}`,`Agência: ${proposal.agency}`,tractionOffer.name,
- tractionOffer.tagline,'Investimento mensal: sob proposta. Implantação: a dimensionar. Total contratual: não definido.',
+ tractionOffer.tagline,`Mensalidade: ${money(tractionOffer.monthly)}. Implantação adicional: sem taxa para landing page e CRM simples e padronizados. Total de honorários proposto: ${money(tractionOffer.monthly*tractionOffer.proposedMonths+tractionOffer.setup)}.`,
  `Prazo sugerido: ${tractionOffer.proposedMonths} meses, sujeito à aprovação.`,
  ...tractionOffer.deliverables.flatMap(group=>[group.title,...group.items.map(item=>`- ${item}`)]),
  'Fora desta oferta:',...tractionOffer.exclusions.map(item=>`- ${item}`),
@@ -21,7 +22,7 @@ export function TractionOffer() {
   <div className="offer-deliverables">{tractionOffer.deliverables.map(group=><div className="offer-deliverable-group" key={group.title}><h3>{group.title}</h3><ul className="investment-included">{group.items.map(item=><li key={item}><Check size={17}/>{item}</li>)}</ul></div>)}</div>
   <MediaGallery numbers={[13,18]}/>
   <p className="price-note">Prévias demonstrativas de produção e CRM. A TRAÇÃO prevê CRM básico; o mockup não representa integrações ou funcionalidades avançadas incluídas. Nenhum sistema é apresentado como já entregue.</p>
-  <div className="traction-conditions"><h3>Investimento a dimensionar</h3><p><strong>{tractionOffer.priceStatus}</strong> · Prazo sugerido: {tractionOffer.proposedMonths} meses.</p><p>{tractionOffer.conditions}</p><p>Mensalidade, implantação e despesas sem preço aprovado permanecem pendentes; não são gratuitas nem entram nos valores dos outros planos.</p><p>{tractionOffer.responsibilities}</p><details className="sprint-exclusions"><summary>O que permanece na MARATONA ou exige novo escopo</summary><ul>{tractionOffer.exclusions.map(item=><li key={item}>{item}</li>)}</ul></details><p className="price-note">Mídia, hospedagem, licenças, APIs, deslocamentos e serviços de terceiros dependem de orçamento e aprovação. A mudança de escopo precisa da concordância expressa da Construcel.</p></div>
+  <div className="traction-conditions"><h3>Investimento TRAÇÃO</h3><p><strong>{money(tractionOffer.monthly)}/mês</strong> · Prazo sugerido: {tractionOffer.proposedMonths} meses.</p><p>Total de honorários proposto: <strong>{money(tractionOffer.monthly*tractionOffer.proposedMonths+tractionOffer.setup)}</strong>. Sem implantação adicional para landing page e CRM simples e padronizados.</p><p>{tractionOffer.conditions}</p><p>Despesas externas não estão incluídas nos honorários e dependem de orçamento e aprovação. Os valores da TRAÇÃO não se somam aos do SPRINT ou da MARATONA.</p><p>{tractionOffer.responsibilities}</p><details className="sprint-exclusions"><summary>O que permanece na MARATONA ou exige novo escopo</summary><ul>{tractionOffer.exclusions.map(item=><li key={item}>{item}</li>)}</ul></details><p className="price-note">Mídia, hospedagem, licenças, APIs, deslocamentos e serviços de terceiros dependem de orçamento e aprovação. A mudança de escopo precisa da concordância expressa da Construcel.</p></div>
   <CommercialRequest customSummary={tractionSummary()} fileLabel="tracao"/>
  </div>;
 }
