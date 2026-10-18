@@ -76,3 +76,6 @@ Por solicitação, as três apresentações e revisões deixam de mostrar compar
 
 ## Planos sem calculadoras e pedidos avulsos — atualização vigente
 As calculadoras, catálogos de adicionais e pedidos de orçamento personalizado foram retirados das três propostas e das três páginas de revisão. O card financeiro exibe somente mensalidade, prazo, implantação e total do plano, sem ler quantidades ou seleções anteriores. Mantidas as entregas, exclusões, despesas externas e formalização contratual. O CTA passa a “Revisar proposta”, sem personalização por serviços avulsos.
+
+## Apresentação focada nas entregas
+Retirados dos cinco planos e das revisões os blocos de itens não incluídos, listas de exclusões e observações que listavam serviços de fora do plano. Textos foram reescritos para descrever a entrega efetiva, mantendo as imagens identificadas como conceituais e os custos externos orçados separadamente. BASE/ARRANQUE passam a oito seções; SPRINT, TRAÇÃO e MARATONA têm nove. Valores, prazos e entregas permanecem inalterados.
