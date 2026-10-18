@@ -97,3 +97,6 @@ Card 12 atualizado com mockup demonstrativo focado em conversão: formulário de
 
 ## Produção de Conteúdo
 Card 13 renomeado para Produção de Conteúdo. Imagem substituída por montagem gerada usando a referência de Ana Paula enviada pelo usuário e o retrato fornecido de Maike, com iPhone em gimbal, ring light e lapela. Não é registro documental de produção realizada; texto alternativo identifica montagem demonstrativa. Exibição integral, sem títulos embutidos.
+
+## Meta Ads e Google Ads — novos mockups
+Cards 14 e 15 atualizados para demonstrações de anúncios sociais no Instagram/Facebook e anúncios de pesquisa no Google, respectivamente. Meta usa a montagem de produção como referência de Ana Paula. Exibição integral sem faixa de título. Não são campanhas ativas, capturas de contas reais ou resultados comerciais comprovados.
