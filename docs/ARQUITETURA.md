@@ -121,3 +121,6 @@ Mockup EAD atualizado com banner de destaque, setas/indicadores de carrossel, tr
 
 ## Membros, integrações e exclusão da seção de audiências
 A pedido do usuário, Membros passa de três para dois cards: Projetos, produtividade e conhecimento (incorpora biblioteca e documentação) e Gestão financeira e indicadores. Quatro novas imagens demonstrativas aplicadas a esses cards e a Ecossistema de integrações / Automação de processos, na identidade Construcel. Seção de audiências/Do branding à performance e seus três quadros removidos da página; arquivos originais preservados. Total de seções atualizado dinamicamente para nove e sequência visual dos cards ajustada. Nenhuma integração ativada.
+
+## Jornada explicativa — seis etapas
+Seção Da estratégia à execução implementada com seis blocos HTML e ícones: contratação digital, onboarding, planejamento/TREAD, implantação, gestão por indicadores e acompanhamento. Explicações incluem primeiro mês de bases, implantação gradual, até 10 KPIs por departamento conforme dados e suporte em horário comercial. Contratação continua com integrações pendentes claramente indicadas. Duas imagens refeitas: infográfico de seis etapas e montagem demonstrativa de reunião de alinhamento com Maike e Ana Paula. Não são comprovação de reunião realizada nem sistemas já ativos.
