@@ -50,3 +50,6 @@ MARATONA: R$ 8.500/mês, 12 meses propostos, implantação proposta R$ 12.000; h
 - Rotas principal, SPRINT, duas revisões e onboarding preservadas. Seções, galerias, ampliações e indicadores demonstrativos preservados.
 - Desktop e mobile: 320, 390, 768 e 1440 px sem rolagem horizontal global; tabela possui sua área própria de rolagem.
 - Nenhum erro de execução no navegador.
+
+## Escolha antecipada — após a apresentação
+`ProposalPaths.tsx` oferece LTDA (SPRINT), MARATONA e Calculadora Freelancer entre a apresentação de Maike e a metodologia. SPRINT abre a rota já existente com liberação visual; MARATONA seleciona a operação completa e navega à metodologia; Freelancer abre a mesma calculadora no modo independente, sem honorários ou mensalidade de plano. Sua seleção é separada dos adicionais de SPRINT/MARATONA e permanece ao recolher a calculadora. O resumo freelancer não inclui o valor de nenhum contrato. Uma faixa extra delimita a nova área (dez faixas na principal e nove no SPRINT). `calculateFreelanceQuote` e `freelanceSummary` mantêm cálculos e resumo separados; nove testes automatizados agora aprovados.

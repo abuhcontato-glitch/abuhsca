@@ -89,3 +89,24 @@ export const comparisonRows: ComparisonRow[] = [
  row('Automações',null,'Processos e relacionamento conforme projeto'),row('Dashboards','Indicadores de campanhas na reunião mensal','Dashboards e indicadores comerciais'),
  row('Universidade Construcel',null,'Desenvolvimento progressivo / EAD'),
 ];
+
+export function calculateFreelanceQuote(quantities: Quantities, catalog: Service[] = serviceCatalog) {
+ const quote=calculateQuote('sprint',quantities,catalog);
+ const lines=quote.lines.map(line=>({...line,additional:false}));
+ return {...quote,lines,baseTotal:0,knownTotal:quote.once,monthly:quote.recurring,pending:lines.filter(line=>line.subtotal===null)};
+}
+export function freelanceSummary(quantities: Quantities) {
+ const quote=calculateFreelanceQuote(quantities);
+ return ['SOLICITAÇÃO DE ORÇAMENTO FREELANCER — NÃO É CONTRATO',
+  `Cliente: ${proposal.company}`,`Agência: ${proposal.agency}`,
+  'Modalidade: serviços avulsos, sem adesão a SPRINT ou MARATONA e sem mensalidade de plano.',
+  ...quote.lines.map(line=>`- ${line.quantity} × ${line.service.name} (${line.service.unit}; ${line.service.billing==='monthly'?'recorrente mensal':'avulso único'}): ${line.subtotal===null?'Sob orçamento':money(line.subtotal)}`),
+  ...(!quote.lines.length?['Nenhum serviço selecionado.']:[]),
+  `Subtotal avulso conhecido: ${quote.lines.some(line=>line.subtotal!==null&&line.service.billing==='once')?money(quote.once):'Sem valores cadastrados'}`,
+  `Recorrentes de serviços selecionados: ${quote.lines.some(line=>line.subtotal!==null&&line.service.billing==='monthly')?money(quote.recurring)+'/mês':'Nenhum com preço cadastrado'}`,
+  `Serviços sob orçamento: ${quote.pending.map(line=>line.service.name).join(', ')||'Nenhum selecionado'}`,
+  'Itens sob orçamento não entram nos totais conhecidos e não são gratuitos. Prazos e condições dependem de orçamento aprovado.',
+  'Despesas externas: não incluído — sob aprovação. Mídia, hospedagem, licenças, APIs e terceiros não equivalem a zero.',
+  'Nenhuma solicitação é enviada, nenhum contrato é concluído e nenhuma cobrança é realizada nesta página.',
+ ].join('\n');
+}

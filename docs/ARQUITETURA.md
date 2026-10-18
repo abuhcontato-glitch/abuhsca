@@ -160,3 +160,5 @@ Esta revisão substitui a base compartilhada descrita anteriormente. Config.ts s
 
 ## Estado comercial interativo
 `CommercialProvider` fica dentro do roteador existente e compartilha plano e quantidades por plano entre seletor, calculadora, resumo, comparativo e revisões. `commercial.ts` contém catálogo e funções puras; `CommercialExperience.tsx` contém os controles e reaproveita os estilos do investimento. O card financeiro é compartilhado por ambas as ofertas em `Investment.tsx`. Não há rotas ou dependências novas, envio de dados, cobrança ou armazenamento persistente. Detalhes e testes em `INTERATIVIDADE-COMERCIAL.md`.
+
+A escolha inicial em `ProposalPaths.tsx` fica depois de AboutSection e antes de MethodologySection, usando as rotas e a calculadora existentes. `ServiceQuoteCalculator standalone` mantém orçamento independente de planos; abrir a calculadora não seleciona um contrato. Não foram criadas novas rotas.

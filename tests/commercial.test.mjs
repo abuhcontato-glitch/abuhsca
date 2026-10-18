@@ -39,3 +39,13 @@ test('commercial summary includes scope consent, pending work and unapproved ext
  for(const text of ['CONSTRUCEL','ABUHSCA','90 dias','7.500','2 × Arte publicitária adicional','Agente de IA','Sob orçamento','Despesas externas não incluídas','não equivalem a zero','concordância expressa','Nenhuma contratação'])assert(summary.includes(text),text);
  assert(!summary.includes('9.500'));
 });
+
+test('freelancer quote never includes plan allowance, monthly fee or contract total',async()=>{
+ const {calculateFreelanceQuote,freelanceSummary}=await import('../src/commercial.ts');
+ const quote=calculateFreelanceQuote({art:2,ecommerce:1});
+ assert.equal(quote.baseTotal,0);assert.equal(quote.knownTotal,0);assert.equal(quote.monthly,0);
+ assert(quote.lines.every(line=>!line.additional));assert.equal(quote.pending.length,2);
+ const summary=freelanceSummary({art:2});assert.match(summary,/sem mensalidade de plano/);assert(!summary.includes('7.500'));assert(!summary.includes('114.000'));assert(!summary.includes('2.500'));
+ const catalog=[{...serviceCatalog[0],unitPrice:50},{...serviceCatalog[1],unitPrice:20,billing:'monthly'}];
+ const priced=calculateFreelanceQuote({art:2,carousel:3},catalog);assert.equal(priced.knownTotal,100);assert.equal(priced.monthly,60);
+});
