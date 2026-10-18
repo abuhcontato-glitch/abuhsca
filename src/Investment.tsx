@@ -1,47 +1,45 @@
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Layers3, LockKeyhole, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Layers3, LockKeyhole, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { proposal, sections } from './config';
 import { expirationDate } from './dates';
 import { TechnologyBudget } from './Technology';
 import { CommercialAlignment } from './CommercialAlignment';
+import { useCommercial } from './CommercialContext';
+import { PlanSelector, PlanDeliverables, QuoteFinancialDetails, ServiceQuoteCalculator, PlanComparison } from './CommercialExperience';
 
 const money = (value: number) => value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', maximumFractionDigits: 0});
-function OfferDeliverables() {
- return <div className="offer-deliverables">{[['Estrutura completa · Implantação prevista', proposal.maratona.setupDeliverables], ['Operação completa · Gestão recorrente', proposal.maratona.monthlyDeliverables], ...proposal.maratona.advancedDeliverables.map(group=>[group.title, group.items])].map(([title,items]) => <div key={title as string} className="offer-deliverable-group"><h3>{title as string}</h3><ul className="investment-included">{(items as string[]).map(item=><li key={item}><Check size={17}/>{item}</li>)}</ul></div>)}</div>;
-}
-
 function OfferValidity() {
  const expiry = expirationDate(proposal.presentedAt, proposal.validityMonths);
  if (!expiry) return <p className="offer-validity">Validade: {proposal.validityMonths} meses após a apresentação. Data efetiva a confirmar.</p>;
  return <p className="offer-validity">{expiry.getTime() <= Date.now() ? 'Proposta expirada. As condições precisam ser reconfirmadas.' : `Condições válidas até ${expiry.toLocaleDateString('pt-BR', {timeZone:'America/Sao_Paulo'})}.`}</p>;
 }
-function PriceSummary({ checkout = false }: {checkout?: boolean}) {
- const offer = proposal.maratona;
- const total = offer.setup + offer.monthly * offer.months;
- return <aside className="maratona-card" aria-label="Resumo do investimento MARATONA">
-  <div className="maratona-card-top"><span className="offer-badge">OPÇÃO 02 · OPERAÇÃO COMPLETA</span><Layers3 size={25} strokeWidth={1.4}/></div>
+export function PriceSummary({ checkout = false, appearance = 'maratona' }: {checkout?: boolean; appearance?: 'maratona'|'sprint'}) {
+ const {plan}=useCommercial(), offer=proposal[plan], sprintStyle=appearance==='sprint';
+ return <aside className={sprintStyle?'sprint-price':'maratona-card'} aria-label={`Resumo do investimento ${plan.toUpperCase()}`}>
+  <div className="maratona-card-top"><span className="offer-badge">{plan==='sprint'?'OPÇÃO 01 · OPERAÇÃO COMERCIAL':'OPÇÃO 02 · OPERAÇÃO COMPLETA'}</span><Layers3 size={25} strokeWidth={1.4}/></div>
   <h3>{offer.name}</h3><p className="maratona-tagline">{offer.tagline}</p>
-  <p className="maratona-price">{money(offer.monthly)}<span>/mês</span></p>
-  <dl className="maratona-breakdown"><div><dt>Implantação proposta</dt><dd>{money(offer.setup)}</dd></div><div><dt>Prazo proposto</dt><dd>{offer.months} meses</dd></div><div className="maratona-total"><dt>Total contratual</dt><dd>{money(total)}</dd></div></dl>
-  <p className="maratona-calculation">{money(offer.setup)} de implantação + {offer.months} mensalidades de {money(offer.monthly)}. Custos externos não incluídos. Implantação e prazo são propostos, sujeitos à concordância de Ana Paula.</p>
-  {checkout ? <><button className="primary-button maratona-disabled" type="button" disabled><LockKeyhole size={16}/>Assinatura e pagamento em preparação</button><p className="checkout-pending">Esta etapa permite revisar a oferta. Contrato eletrônico, assinatura e gateway ainda precisam ser integrados. Nenhuma contratação ou cobrança é realizada aqui.</p></> : <Link className="primary-button maratona-cta" to="/construcel/contratacao/maratona">Quero aproveitar esta oferta <ArrowUpRight size={20}/></Link>}
-  <div className="offer-assurance"><ShieldCheck size={17}/><span>Escopo e condições formalizados em contrato.</span></div><OfferValidity/><TechnologyBudget offer="maratona"/>
+  <p className={sprintStyle?'sprint-monthly':'maratona-price'}>{money(offer.monthly)}<span>/mês</span></p>
+  <QuoteFinancialDetails/>
+  {checkout ? <><button className="primary-button maratona-disabled" type="button" disabled><LockKeyhole size={16}/>Assinatura e pagamento em preparação</button><p className="checkout-pending">Revisão e solicitação comercial. Nenhuma contratação ou cobrança é realizada aqui.</p></> : <Link className="primary-button maratona-cta" to={`/construcel/contratacao/${plan}`}>Revisar proposta personalizada <ArrowUpRight size={20}/></Link>}
+  <div className="offer-assurance"><ShieldCheck size={17}/><span>Escolha sujeita à negociação e formalização em contrato.</span></div><OfferValidity/><TechnologyBudget offer={plan}/>
  </aside>;
 }
-function OfferConditions() {
+export function OfferConditions() {
  return <div className="offer-conditions"><h3>Condições e despesas adicionais</h3><p>Os honorários remuneram os serviços, a direção, a gestão e a equipe mobilizada pela ABUHSCA para executar o escopo contratado.</p><p>Não estão incluídos, salvo previsão expressa em contrato:</p><ul>{proposal.externalCosts.map(cost=><li key={cost}>{cost}</li>)}</ul><p>Os custos externos devem ser previamente orçados e aprovados pela contratante. A equipe necessária ao escopo contratado não representa uma cobrança adicional automática.</p><p>Estas são condições comerciais propostas, não uma validação de rentabilidade nem cotações verificadas do mercado de Brasília. Antes da assinatura, a MARATONA exige auditoria do catálogo e orçamento real de produção, IA e integrações, com avaliação de custos, impostos e capacidade de entrega.</p><p>As demonstrações representam implantação prevista, desenvolvimento progressivo ou escopo técnico adicional; não são sistemas já entregues. “Escopo técnico adicional” identifica aprofundamento a dimensionar dentro da MARATONA, sem cobrança automática. A implantação será progressiva, conforme cronograma e dependências técnicas acordadas. O levantamento inicial definirá o volume do catálogo, integrações necessárias e responsabilidades pelo fornecimento de informações e acessos. Implantação e custos externos serão explicados e negociados previamente com Ana Paula.</p><p>Não há garantia de quantidade específica de leads, vendas ou faturamento.</p><CommercialAlignment/></div>;
 }
 export function InvestmentSection() {
  const index = sections.findIndex(section=>section.id==='investimento');
+ const {plan}=useCommercial(), offer=proposal[plan];
  return <section id="investimento" className="investment-section" aria-labelledby="investment-title">
   <div className="section-number">{String(index+1).padStart(2,'0')} / {String(sections.length).padStart(2,'0')} · INVESTIMENTO</div>
-  <div className="investment-grid"><div className="investment-copy"><p className="eyebrow">UMA NOVA ESTRUTURA PARA CRESCER.</p><h2 id="investment-title">MARATONA<span>.</span><small>{proposal.maratona.subtitle}</small></h2><p className="investment-lead">{proposal.maratona.tagline}</p><p className="investment-description">{proposal.maratona.description}</p><OfferDeliverables/><div className="investment-direction"><span className="status-dot"/><p>Liderança de <strong>Maike Christian</strong>, com especialistas mobilizados conforme as demandas e o escopo contratado. Implantação progressiva ao longo do cronograma.</p></div></div><PriceSummary/></div>
-  <OfferConditions/>
+  <PlanSelector/><div className="investment-grid"><div className="investment-copy"><p className="eyebrow">UMA NOVA ESTRUTURA PARA CRESCER.</p><h2 id="investment-title">{plan.toUpperCase()}<span>.</span><small>{plan==='maratona'?proposal.maratona.subtitle:'OPERAÇÃO COMERCIAL · 90 DIAS'}</small></h2><p className="investment-lead">{offer.tagline}</p><p className="investment-description">{offer.description}</p><PlanDeliverables/><div className="investment-direction"><span className="status-dot"/><p>Liderança de <strong>Maike Christian</strong>, com especialistas mobilizados conforme as demandas e o escopo contratado. Implantação progressiva ao longo do cronograma.</p></div></div><PriceSummary/></div>
+  <ServiceQuoteCalculator/><PlanComparison/><OfferConditions/>
   <div className="investment-closing"><p>O futuro da Construcel não será construído apenas com ideias.</p><strong>Será construído com execução.</strong><span>ABUHSCA × CONSTRUCEL</span></div>
  </section>;
 }
 export function MaratonaCheckout() {
  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, []);
- return <main id="conteudo" className="maratona-checkout"><header className="checkout-header"><Link to="/construcel" className="checkout-back"><ArrowLeft size={17}/>Voltar à proposta</Link><span>ABUHSCA × CONSTRUCEL</span></header><ol className="checkout-stages" aria-label="Etapas da contratação"><li aria-current="step"><span>01</span>Revisão da oferta</li><li><span>02</span>Contrato e assinatura</li><li><span>03</span>Pagamento</li><li><span>04</span>Onboarding</li></ol><div className="investment-grid"><div className="checkout-copy"><p className="eyebrow">PROPOSTA EXCLUSIVA · {proposal.client.toUpperCase()}</p><h1>Revise o seu<br/><span>próximo capítulo.</span></h1><h2>{proposal.maratona.name}</h2><p className="investment-lead">{proposal.maratona.tagline}</p><p className="investment-description">{proposal.maratona.description}</p><OfferDeliverables/><div className="checkout-next"><ShieldCheck size={25}/><div><h3>Como a contratação será concluída</h3><p>Após a revisão de escopo e condições, a contratante será identificada no fluxo seguro de contrato e assinatura. O pagamento será processado pelo fornecedor escolhido e confirmado pelo servidor antes do onboarding.</p></div></div><Link className="checkout-back" to="/construcel">Continuar revisando a proposta <ArrowRight size={17}/></Link></div><PriceSummary checkout/></div><OfferConditions/></main>;
+ const {plan}=useCommercial(), offer=proposal[plan];
+ return <main id="conteudo" className="maratona-checkout"><header className="checkout-header"><Link to="/construcel" className="checkout-back"><ArrowLeft size={17}/>Voltar à proposta</Link><span>ABUHSCA × CONSTRUCEL</span></header><ol className="checkout-stages" aria-label="Etapas da contratação"><li aria-current="step"><span>01</span>Revisão da oferta</li><li><span>02</span>Contrato e assinatura</li><li><span>03</span>Pagamento</li><li><span>04</span>Onboarding</li></ol><PlanSelector/><div className="investment-grid"><div className="checkout-copy"><p className="eyebrow">PROPOSTA EXCLUSIVA · {proposal.client.toUpperCase()}</p><h1>Revise o seu<br/><span>próximo capítulo.</span></h1><h2>{offer.name}</h2><p className="investment-lead">{offer.tagline}</p><p className="investment-description">{offer.description}</p><PlanDeliverables/><div className="checkout-next"><ShieldCheck size={25}/><div><h3>Como a contratação será concluída</h3><p>Copie ou baixe a solicitação com o plano e os adicionais escolhidos e compartilhe pelo canal habitual. Escopo, preços pendentes e condições serão negociados antes de qualquer contrato. Nenhum envio, assinatura ou pagamento é feito aqui.</p></div></div><Link className="checkout-back" to="/construcel">Continuar revisando a proposta <ArrowRight size={17}/></Link></div><PriceSummary checkout/></div><ServiceQuoteCalculator/><OfferConditions/></main>;
 }

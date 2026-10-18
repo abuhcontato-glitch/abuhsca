@@ -23,6 +23,7 @@ const groups: Record<string, number[]> = {
 const orderedMedia = Object.values(groups).flat();
 const displayNumber = (number: number) => String(orderedMedia.indexOf(number) + 6).padStart(2, '0');
 const serviceDescriptions: Record<number, string> = {
+ 16: 'Dashboard conceitual de leads, orçamentos, campanhas, mídia, oportunidades e conversões. Dados fictícios, não resultados reais da Construcel.',
  18: 'Organize oportunidades, responsáveis e tarefas em cada etapa do funil comercial.',
  19: 'Automatize perguntas frequentes e encaminhamentos com regras, menus e fluxos predefinidos.',
  22: 'Desenvolvimento progressivo · Conceito de plataforma com banner em carrossel e módulos de Diretoria, Financeiro, Faturamento, Comercial e Marketing.',

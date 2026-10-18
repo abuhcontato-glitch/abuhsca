@@ -157,3 +157,6 @@ O escopo atual está em PROPOSTAS-COMERCIAIS-ATUAIS.md e substitui as exclusões
 
 ## Revisão comercial posterior — SPRINT de aquisição
 Esta revisão substitui a base compartilhada descrita anteriormente. Config.ts separa o SPRINT enxuto (R$ 2.500/mês, implantação adicional zero condicionada a implementações simples, total R$ 7.500) da MARATONA completa (valores preservados). SPRINT mantém dez seções, nove faixas cruzadas, mockups de campanhas/Google/landing e mini CRM; demonstrações de site/loja, audiovisual presencial, IA e treinamento ficam somente na MARATONA. Economia unitária da agência fica fora do repositório público.
+
+## Estado comercial interativo
+`CommercialProvider` fica dentro do roteador existente e compartilha plano e quantidades por plano entre seletor, calculadora, resumo, comparativo e revisões. `commercial.ts` contém catálogo e funções puras; `CommercialExperience.tsx` contém os controles e reaproveita os estilos do investimento. O card financeiro é compartilhado por ambas as ofertas em `Investment.tsx`. Não há rotas ou dependências novas, envio de dados, cobrança ou armazenamento persistente. Detalhes e testes em `INTERATIVIDADE-COMERCIAL.md`.

@@ -26,3 +26,6 @@ Mantida a operação completa: site, e-commerce, checkout, cadastro de produtos,
 O pacote mencionado anteriormente por R$ 2.500 era maior. O SPRINT atual é uma alternativa revisada focada em vendas. Ana Paula deve concordar expressamente com a mudança antes de contratar; editar a página não comprova essa concordância. A diferença mensal é R$ 6.000, com responsabilidades e capacidade operacional distintas.
 
 Mídia, hospedagem, CRM pago e licenças são despesas externas da Construcel, orçadas e aprovadas separadamente. Demais despesas extraordinárias também exigem aprovação. Custos internos e simulações de margem da ABUHSCA ficam fora do site público. Checkouts são revisão de oferta, sem assinatura ou pagamento ativo.
+
+## Personalização interativa
+Os honorários acima permanecem como base. Adicionais explicitamente selecionados são separados em avulsos e recorrentes; os serviços incluídos só podem gerar seleção de volume extra. Sem tabela aprovada, os serviços avulsos ficam “Sob orçamento” e não entram nos totais numéricos. O resumo para copiar/baixar é uma solicitação comercial, sem envio, contratação ou cobrança automática. Veja `INTERATIVIDADE-COMERCIAL.md`.

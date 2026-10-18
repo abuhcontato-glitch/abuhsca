@@ -1,0 +1,52 @@
+# Expansão interativa — ABUHSCA × CONSTRUCEL
+
+## Resultado
+A proposta existente ganhou escolha de plano, orçamento personalizado e preparação de solicitação comercial. Não foram criadas rotas, checkout, cobrança ou integração de contato. As páginas de revisão já existentes continuam acessíveis.
+
+SPRINT: R$ 2.500/mês, 90 dias propostos, sem implantação adicional para landing page e CRM simples e padronizados; honorários R$ 7.500. Mantido o escopo revisado (até duas campanhas por plataforma, oito criativos, oito publicações Instagram, landing page, Perfil da Empresa, WhatsApp, CRM básico e reunião mensal), sujeito à concordância expressa de Ana Paula.
+
+MARATONA: R$ 8.500/mês, 12 meses propostos, implantação proposta R$ 12.000; honorários R$ 114.000. Mantida a operação completa e sua implantação progressiva.
+
+## Auditoria e reaproveitamento
+| Existente | Evolução |
+| --- | --- |
+| Configuração de planos em config.ts | Mantida como fonte dos honorários e das entregas |
+| Dois cards financeiros e listas duplicadas | PriceSummary e PlanDeliverables compartilhados, com o mesmo estilo original |
+| Comparação SPRINT | PlanComparison reutilizado nas duas propostas, com coluna selecionada e 18 entregas detalhadas |
+| Seções de investimento e CTAs | Seletor, calculadora e resumo integrados a essas seções |
+| Rotas de revisão de contratação | Preservadas; recebem o plano e os adicionais da sessão |
+| Mini CRM SPRINT e dashboard visual MARATONA | Preservados; indicadores fictícios e aviso demonstrativo explícito |
+| Institucional de Maike e ABUHSCA | Mesmo layout, texto reforçando as áreas da assessoria |
+| Mockups, galerias, jornada e faixas | Preservados: 24 cards principais, duas imagens de produção/alinhamento no SPRINT, nove faixas por proposta |
+
+## Arquivos
+- `src/commercial.ts` (novo): catálogo de 20 serviços, cinco categorias, regras de inclusão/adicionais, funções puras para quantidades, cálculo e resumo. Preços avulsos configuráveis, todos inicialmente `null`.
+- `src/CommercialContext.tsx` (novo): estado compartilhado, plano escolhido e seleções independentes por plano. Sem persistência após recarregar, sem dados pessoais e sem envio.
+- `src/CommercialExperience.tsx` (novo): PlanSelector, PlanDeliverables, QuoteFinancialDetails, ServiceQuoteCalculator, PlanComparison e CommercialRequest.
+- `src/Investment.tsx`: card financeiro reutilizado, entrega dinâmica e integração dos controles nas seções existentes e na revisão MARATONA.
+- `src/Sprint.tsx`: comparação e resumo compartilhados, calculadora na seção final e revisão SPRINT; enriquecimento do mini CRM existente.
+- `src/main.tsx`: provider compartilhado dentro do roteador existente.
+- `src/Journey.tsx`: CTA acompanha o plano escolhido.
+- `src/MediaGallery.tsx`: esclarecimento dos indicadores demonstrativos no dashboard.
+- `src/Presentation.tsx`: valorização da assessoria no texto existente.
+- `src/styles.css`: estilos adicionais usando paleta, fontes, bordas e cards originais; sem mudança de identidade.
+- `tests/commercial.test.mjs` (novo): seis testes de regras e cálculo; os dois testes de datas existentes foram mantidos.
+- `README.md`, `docs/ARQUITETURA.md`, `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md` e este relatório: documentação de uso, regras e validação.
+
+## Regras e pendências
+1. Serviços incluídos não são adicionados ao carrinho nem cobrados de novo. A quantidade selecionada significa volume extra ou serviço extraordinário. Cada plano guarda somente sua seleção explícita.
+2. Nenhuma tabela avulsa aprovada foi encontrada. Todos os 20 serviços aparecem “Sob orçamento”, incluindo e-commerce e IA. Os valores ficam pendentes, nunca convertidos em serviço gratuito.
+3. Há separação entre mensalidade, adicionais recorrentes, implantação e avulsos. O cálculo suporta preços aprovados e recorrência quando cadastrados. O catálogo inicial é de trabalhos avulsos; não há valores ilustrativos em produção.
+4. Despesas externas: “Não incluído — sob aprovação”. Não fazem parte dos totais conhecidos e não equivalem a zero. O valor conhecido também não define o primeiro pagamento ou calendário de cobrança.
+5. Solicitar contratação/negociação prepara o resumo, sem envio automático. É possível copiar ou baixar TXT e compartilhar pelo canal habitual. Sem número, endpoint ou integração inventados. Se a área de transferência não estiver disponível, o texto é exibido para cópia manual.
+6. Plano, adicionais, valores pendentes, escopo, duração e responsabilidades precisam de negociação/aceite e formalização. Não há contrato concluído nem cobrança automática. A mudança do SPRINT continua explicitamente pendente da concordância de Ana Paula.
+
+## Validação
+- Build de produção para GitHub Pages: `npm run build -- --base=/abuhsca/`.
+- `npm test`: oito testes aprovados (seis comerciais e dois de datas).
+- Cálculos: R$ 7.500 e R$ 114.000; preços de teste isolados validam centavos, avulsos e recorrência sem publicar esses valores.
+- Browser: ambos os planos, troca de cards e entregas, carrinhos separados, quantidades 0–99, inclusão/remoção/limpeza, pendências e prevenção de duplicidade.
+- Cópia efetiva do resumo, fallback sem clipboard e download TXT; navegação e estado nas revisões existentes; pagamentos continuam desabilitados.
+- Rotas principal, SPRINT, duas revisões e onboarding preservadas. Seções, galerias, ampliações e indicadores demonstrativos preservados.
+- Desktop e mobile: 320, 390, 768 e 1440 px sem rolagem horizontal global; tabela possui sua área própria de rolagem.
+- Nenhum erro de execução no navegador.

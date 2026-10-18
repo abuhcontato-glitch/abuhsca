@@ -2,6 +2,7 @@ import { FileCheck2, UsersRound, ListChecks, Layers3, ChartNoAxesCombined, Messa
 import { Link } from 'react-router-dom';
 import { sections } from './config';
 import { MediaGallery } from './MediaGallery';
+import { useCommercial } from './CommercialContext';
 
 const steps = [
  { title: 'Contratação digital', icon: FileCheck2, summary: 'Escopo claro. Um começo alinhado.', description: 'Revisão e aprovação da proposta, contrato eletrônico, assinatura e confirmação de pagamento antes da liberação do onboarding.', points: ['Proposta e condições revisadas', 'Contrato e assinatura eletrônica', 'Confirmação pelo processo de pagamento'], note: 'Fluxo previsto. Assinatura e pagamento ainda dependem de integração.' },
@@ -12,6 +13,7 @@ const steps = [
  { title: 'Acompanhamento', icon: MessagesSquare, summary: 'Alinhar, medir e evoluir.', description: 'Reuniões semanais de alinhamento para revisar resultados, ajustar prioridades, acompanhar entregas e definir os próximos passos.', points: ['Revisão de indicadores e relatórios', 'Ajustes de prioridades e plano de ação', 'Reuniões semanais, conforme agendamento'], note: 'Suporte via WhatsApp. Detalhamento na reunião de escopo.' },
 ];
 export function JourneySection() {
+ const {plan}=useCommercial();
  const index = sections.findIndex(section => section.id === 'jornada');
  return <section id="jornada" className="journey-section" aria-labelledby="journey-title">
   <div className="section-number">{String(index+1).padStart(2,'0')} / {String(sections.length).padStart(2,'0')} · COMO VAI FUNCIONAR</div>
@@ -19,6 +21,6 @@ export function JourneySection() {
   <ol className="journey-grid">{steps.map(({title,icon:Icon,summary,description,points,note},i) => <li className="journey-card" key={title}><div className="journey-card-top"><Icon size={29} strokeWidth={1.5}/><span>{String(i+1).padStart(2,'0')}</span></div><h3>{title}</h3><strong>{summary}</strong><p>{description}</p><ul>{points.map(point => <li key={point}>{point}</li>)}</ul><p className="journey-note">{note}</p></li>)}</ol>
   <div className="journey-alignment"><div><p className="eyebrow">REUNIÕES DE ALINHAMENTO</p><h3>A mesma direção.<br/>Os próximos passos definidos.</h3></div><p>Maike e Ana Paula revisam objetivos, prioridades e responsabilidades. Cada reunião orienta as decisões e o que precisa avançar na operação.</p></div>
   <MediaGallery section="jornada"/>
-  <div className="journey-closing"><p>Você cuida do seu negócio.<br/><strong>Nós ajudamos a construir o crescimento.</strong></p><Link to="/construcel/contratacao/maratona" className="primary-button">Revisar contratação <ArrowRight size={18}/></Link></div>
+  <div className="journey-closing"><p>Você cuida do seu negócio.<br/><strong>Nós ajudamos a construir o crescimento.</strong></p><Link to={`/construcel/contratacao/${plan}`} className="primary-button">Revisar contratação <ArrowRight size={18}/></Link></div>
  </section>;
 }
