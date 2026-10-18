@@ -67,3 +67,16 @@ test('entry plans have separate monthly cycle totals and bounded deliverables',a
  assert(!proposal.tracao.exclusions.join(' ').includes('chatbots'));assert(!proposal.tracao.exclusions.join(' ').includes('Site institucional'));
  assert.match(proposal.maratona.setupDeliverables.join(' '),/E-commerce|e-commerce|loja virtual/);
 });
+
+
+test('full freelance catalog has unique services and accent-insensitive category search',async()=>{
+ const {filterServiceCatalog}=await import('../src/commercial.ts');
+ assert.equal(new Set(serviceCatalog.map(service=>service.id)).size,serviceCatalog.length);
+ assert.equal(new Set(serviceCatalog.map(service=>service.category)).size,9);
+ assert.equal(filterServiceCatalog('Todas','').length,serviceCatalog.length);
+ assert(filterServiceCatalog('Todas','VIDEO').length>0);
+ assert.deepEqual(filterServiceCatalog('Todas','vídeo'),filterServiceCatalog('Todas','VIDEO'));
+ const category=serviceCatalog[0].category;
+ assert(filterServiceCatalog(category,'').every(service=>service.category===category));
+ assert.deepEqual(filterServiceCatalog('Todas','zzzzsemresultado'),[]);
+});
