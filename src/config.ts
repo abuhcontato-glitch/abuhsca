@@ -17,7 +17,6 @@ export const sections = [
   { id: 'coracao', title: 'O coração da operação.', pillar: 'Relacionamentos, orçamentos e vendas.' },
   { id: 'membros', title: 'Os membros da operação.', pillar: 'Produtividade, colaboração e conhecimento.' },
   { id: 'integracoes', title: 'Tudo conectado. Tudo sob controle.', pillar: 'Integrações e automações.' },
-  { id: 'audiencias', title: 'Não criamos apenas conteúdo. Construímos audiências.', pillar: 'Do branding à performance.' },
   { id: 'jornada', title: 'Da estratégia à execução.', pillar: 'Como vai funcionar.' },
   { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — Transformação completa Construcel.' },
 ];

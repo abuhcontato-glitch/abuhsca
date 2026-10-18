@@ -118,3 +118,6 @@ Imagem de treinamento atualizada para montagem demonstrativa com Maike como inst
 
 ## Universidade Construcel — experiência de streaming
 Mockup EAD atualizado com banner de destaque, setas/indicadores de carrossel, trilhas e continuação de aulas. Módulos solicitados: Diretoria, Financeiro, Faturamento, Comercial e Marketing. Visual próprio na identidade Construcel. O banner é representação estática; não há carrossel funcional, cursos ou plataforma EAD implementados nesta entrega de imagem.
+
+## Membros, integrações e exclusão da seção de audiências
+A pedido do usuário, Membros passa de três para dois cards: Projetos, produtividade e conhecimento (incorpora biblioteca e documentação) e Gestão financeira e indicadores. Quatro novas imagens demonstrativas aplicadas a esses cards e a Ecossistema de integrações / Automação de processos, na identidade Construcel. Seção de audiências/Do branding à performance e seus três quadros removidos da página; arquivos originais preservados. Total de seções atualizado dinamicamente para nove e sequência visual dos cards ajustada. Nenhuma integração ativada.
