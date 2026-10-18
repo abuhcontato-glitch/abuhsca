@@ -48,3 +48,5 @@ Fluxo vigente: `/construcel` apresenta a agência e três botões. Cada botão a
 As três propostas agora exibem apenas o plano fechado: entregas, condições, mensalidade, prazo, implantação e total. Calculadoras, seleção de adicionais e pedidos de serviços avulsos foram retirados das propostas e revisões. Os valores continuam SPRINT R$ 2.500/mês por 90 dias, TRAÇÃO R$ 5.500/mês por seis meses e MARATONA R$ 8.500/mês por 12 meses.
 
 Agora são cinco propostas individuais: BASE R$ 500/mês e ARRANQUE R$ 1.500/mês (ambos com ciclo inicial proposto de 30 dias), além de SPRINT, TRAÇÃO e MARATONA. Escopos atuais em `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`; a TRAÇÃO inclui site oficial e chatbot, e o SPRINT inclui landing pages conforme alinhamento de escopo.
+
+A MARATONA possui uma demonstração clicável de 11 módulos, acessível pelo menu “A operação”. CRM, atendimento, automação, chatbot, prévia de IA, conteúdo, landing page, formulário, agenda, segmentação e mapeamento funcionam com dados fictícios locais. Detalhes em `docs/DEMONSTRACAO-MODULOS.md`.
