@@ -8,7 +8,7 @@ import { CommercialAlignment } from './CommercialAlignment';
 
 const money = (value: number) => value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', maximumFractionDigits: 0});
 function OfferDeliverables() {
- return <div className="offer-deliverables">{[['Base SPRINT · Implantação prevista', proposal.maratona.setupDeliverables], ['Base SPRINT · Gestão recorrente', proposal.maratona.monthlyDeliverables], ...proposal.maratona.advancedDeliverables.map(group=>[group.title, group.items])].map(([title,items]) => <div key={title as string} className="offer-deliverable-group"><h3>{title as string}</h3><ul className="investment-included">{(items as string[]).map(item=><li key={item}><Check size={17}/>{item}</li>)}</ul></div>)}</div>;
+ return <div className="offer-deliverables">{[['Estrutura completa · Implantação prevista', proposal.maratona.setupDeliverables], ['Operação completa · Gestão recorrente', proposal.maratona.monthlyDeliverables], ...proposal.maratona.advancedDeliverables.map(group=>[group.title, group.items])].map(([title,items]) => <div key={title as string} className="offer-deliverable-group"><h3>{title as string}</h3><ul className="investment-included">{(items as string[]).map(item=><li key={item}><Check size={17}/>{item}</li>)}</ul></div>)}</div>;
 }
 
 function OfferValidity() {

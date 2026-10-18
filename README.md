@@ -32,9 +32,9 @@ A página será pública, incluindo os arquivos de mídia e o conteúdo SPRINT n
 ## Ofertas comerciais
 A MARATONA agora possui seção de investimento e revisão de contratação em `/construcel/contratacao/maratona`. A SPRINT tem página completa em `/construcel/sprint`, acessada por Liberar SPRINT no final da proposta principal, e revisão independente em `/construcel/contratacao/sprint`. A liberação é visual, sem autenticação de servidor. As páginas permitem revisar preços, escopo e condições; pagamentos, assinatura e onboarding ainda não estão integrados. Conteúdo e valores da MARATONA estão em `src/config.ts`; comparação e conteúdo SPRINT em `src/Sprint.tsx`.
 
-Os valores e escopos atuais estão em `src/config.ts` e `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`: MARATONA R$ 8.500/mês + R$ 12.000 por 12 meses (R$ 114.000); SPRINT R$ 2.500/mês + R$ 2.000 por três meses (R$ 9.500). Substituem condições anteriores.
+Os valores e escopos atuais estão em `src/config.ts` e `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`: MARATONA R$ 8.500/mês + R$ 12.000 por 12 meses (R$ 114.000); SPRINT R$ 2.500/mês por três meses (R$ 7.500), sem implantação adicional para landing page e CRM simples e padronizados. Substituem condições anteriores.
 
 ## Tecnologia prevista
 A seção de integrações agora detalha ferramentas recomendadas e reservas estimadas adicionais à agência/mídia: SPRINT a dimensionar após ampliação do escopo; MARATONA R$ 205–705/mês, referência preliminar a revisar. São premissas não verificadas, condicionadas a orçamento e aprovação. Nenhuma assinatura ou integração foi ativada. Não publicar planejamento financeiro interno da agência no site público.
 
-A atualização cirúrgica de escopo mantém os serviços originais no SPRINT — PREMIUM LTDA e os inclui na MARATONA — OPERAÇÃO 360°, com maior profundidade e evolução. Implantação e prazos são propostos. Veja `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`.
+O SPRINT — 90 DIAS é uma alternativa revisada de aquisição e orçamentos, com escopo delimitado e concordância expressa necessária de Ana Paula. A operação completa permanece na MARATONA — OPERAÇÃO 360°. Veja `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`.

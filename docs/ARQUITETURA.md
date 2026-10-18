@@ -154,3 +154,6 @@ Substitui todos os valores anteriores: opção 01 SPRINT R$ 2.500/mês + R$ 2.00
 
 ## Atualização cirúrgica vigente — outubro de 2026
 O escopo atual está em PROPOSTAS-COMERCIAIS-ATUAIS.md e substitui as exclusões antigas do SPRINT. A base de serviços é compartilhada em config.ts; MARATONA acrescenta grupos avançados. Mantidas 9 seções principais, 10 no SPRINT, 24 imagens principais, rotas, modal, gate visual, comparação, cronogramas e checkouts. MediaGallery é reutilizada no SPRINT para conteúdo, site/loja, CRM, chatbot, IA e treinamento, sem novo componente visual. CSS e identidade inalterados.
+
+## Revisão comercial posterior — SPRINT de aquisição
+Esta revisão substitui a base compartilhada descrita anteriormente. Config.ts separa o SPRINT enxuto (R$ 2.500/mês, implantação adicional zero condicionada a implementações simples, total R$ 7.500) da MARATONA completa (valores preservados). SPRINT mantém dez seções, nove faixas cruzadas, mockups de campanhas/Google/landing e mini CRM; demonstrações de site/loja, audiovisual presencial, IA e treinamento ficam somente na MARATONA. Economia unitária da agência fica fora do repositório público.

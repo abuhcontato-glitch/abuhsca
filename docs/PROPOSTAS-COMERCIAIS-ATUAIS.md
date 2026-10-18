@@ -1,33 +1,28 @@
-# Estrutura comercial atual — ABUHSCA × CONSTRUCEL
+# Estrutura comercial vigente — ABUHSCA × CONSTRUCEL
 
-Esta versão substitui escopos e nomes anteriores. Identidade, rotas, ordem das seções, demonstrações e funcionalidades existentes foram preservadas.
+Substitui o SPRINT amplo anteriormente apresentado. Layout, faixas cruzadas, rotas, dez seções SPRINT e nove seções MARATONA preservados.
 
-| Opção | Mensalidade | Implantação proposta | Prazo proposto | Total contratual proposto |
+| Oferta | Mensalidade | Implantação | Prazo proposto | Total de honorários |
 | --- | --- | --- | --- | --- |
-| 01 · SPRINT — PREMIUM LTDA | R$ 2.500 | R$ 2.000 | 90 dias / 3 mensalidades | R$ 9.500 |
-| 02 · MARATONA — OPERAÇÃO 360° | R$ 8.500 | R$ 12.000 | 12 meses | R$ 114.000 |
+| SPRINT — 90 DIAS | R$ 2.500 | Sem adicional para landing page e CRM simples e padronizados | 90 dias / 3 mensalidades | R$ 7.500 |
+| MARATONA — OPERAÇÃO 360° | R$ 8.500 | R$ 12.000 propostos | 12 meses | R$ 114.000 |
 
-Diferença mensal: R$ 6.000. Implantação e duração não são apresentadas como condições previamente acordadas.
+## SPRINT revisado
+1. Meta Ads e Google Ads, até duas campanhas ativas por plataforma; monitoramento e otimização semanal.
+2. Oito criativos publicitários por mês: estáticos, carrosséis ou edição simples de vídeos da cliente.
+3. Oito publicações mensais Instagram, reaproveitando materiais de campanha, sem produção adicional.
+4. Uma landing page comercial para orçamento pelo WhatsApp, implantada no primeiro mês.
+5. Google Perfil da Empresa: otimização inicial e acompanhamento básico.
+6. WhatsApp Business: catálogo prioritário, mensagens rápidas, etiquetas e direcionamento comercial.
+7. CRM básico para leads e orçamentos.
+8. Uma reunião mensal de indicadores, resultados e próximas ações.
 
-## Base SPRINT, também incluída na MARATONA
-- Site institucional, e-commerce, catálogo, carrinho, checkout, pagamento e estrutura de cadastro de produtos.
-- Landing page e presença no Google, mantendo as demonstrações existentes.
-- 24 publicações mensais no Instagram, entre feed e Stories, e 24 no TikTok; planejamento editorial, criação e adaptação.
-- Meta Ads e Google Ads: gestão, planejamento, desempenho e 20 anúncios/criativos com periodicidade a definir, nunca anunciados como 20 por mês.
-- Visita presencial, roteiro, captação, edição de vídeos e criativos. Sem frequência inventada.
-- CRM, funil, organização do atendimento, chatbot e agente de IA conversacional para leads.
-- Treinamento presencial inicial, suporte WhatsApp, reuniões semanais e acompanhamento do tráfego e vendas.
+Execução remota com materiais da Construcel. Visita ou vídeo original podem ser contratados separadamente mediante orçamento e aprovação. No mês 1 implantar, no 2 otimizar, no 3 consolidar. Não há garantia de leads, vendas ou faturamento.
 
-Quantidades, frequência, catálogo, implantação e demais definições pendentes recebem “Detalhamento na reunião de escopo”. Não há limites de visitas, produtos ou horários de suporte inventados.
+## MARATONA
+Mantida a operação completa: site, e-commerce, checkout, cadastro de produtos, 24 publicações Instagram e 24 TikTok, audiovisual presencial, 20 criativos (periodicidade ainda a definir), IA, chatbot, CRM avançado, integrações, reuniões semanais, branding, plano de marketing e Universidade/EAD. Mantidas todas as demonstrações e a implantação progressiva conforme escopo técnico e cronograma.
 
-## Profundidade MARATONA
-Inclui toda a base SPRINT e amplia estratégia (plano aprofundado, mercado, posicionamento, branding, manual e plano anual), digital (páginas adicionais, SEO, CRO e integrações), marketing (remarketing, e-mail e relacionamento), comercial (CRM avançado, indicadores e dashboards), IA (qualificação, follow-up e automações avançadas), gestão e capacitação (processos, projetos, financeiro, treinamentos e Universidade/EAD).
+## Concordância necessária
+O pacote mencionado anteriormente por R$ 2.500 era maior. O SPRINT atual é uma alternativa revisada focada em vendas. Ana Paula deve concordar expressamente com a mudança antes de contratar; editar a página não comprova essa concordância. A diferença mensal é R$ 6.000, com responsabilidades e capacidade operacional distintas.
 
-As demonstrações representam implantação prevista, desenvolvimento progressivo e escopo técnico adicional a dimensionar na operação, sem cobrança automática. Não representam sistemas já entregues.
-
-## Condições
-Ana Paula deve revisar e concordar expressamente com entregas, etapas, responsabilidades, implantação e prazo antes da assinatura. SPRINT ativa a base original no período inicial; MARATONA amplia profundidade, módulos e evolução contínua. A diferença não é construída excluindo serviços originalmente prometidos.
-
-Honorários, infraestrutura, mídia, licenças, APIs, tarifas e despesas aprovadas permanecem separados. O documento recebido termina no início da seção 9 de custos externos, por isso as condições já existentes foram preservadas. O orçamento SPRINT de tecnologia precisa ser redimensionado; a antiga faixa do produto reduzido não é mais apresentada. A faixa MARATONA permanece preliminar, não cotação confirmada.
-
-Sem garantia de leads, vendas ou faturamento. Checkouts continuam páginas de revisão sem assinatura ou pagamento ativo.
+Mídia, hospedagem, CRM pago e licenças são despesas externas da Construcel, orçadas e aprovadas separadamente. Demais despesas extraordinárias também exigem aprovação. Custos internos e simulações de margem da ABUHSCA ficam fora do site público. Checkouts são revisão de oferta, sem assinatura ou pagamento ativo.

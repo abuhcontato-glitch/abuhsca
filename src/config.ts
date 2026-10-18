@@ -1,5 +1,5 @@
-// Base original compartilhada pelas duas propostas. Frequências não definidas permanecem abertas.
-const originalServices = {
+// Escopo completo MARATONA; independente do SPRINT revisado.
+const maratonaServices = {
     setupDeliverables: [
       'Site institucional responsivo e loja virtual.',
       'Catálogo, carrinho, checkout e integração de pagamento.',
@@ -33,10 +33,10 @@ export const proposal = {
     name: 'MARATONA — OPERAÇÃO 360°',
     subtitle: 'OPERAÇÃO 360°',
     tagline: 'Departamento completo de marketing, publicidade, tecnologia, e-commerce e inteligência artificial.',
-    description: 'Todos os serviços do SPRINT, com direção estratégica contínua, maior profundidade técnica, novos módulos e evolução da operação em 12 meses propostos.',
+    description: 'Operação completa de marketing, publicidade, tecnologia, e-commerce e inteligência artificial, com direção estratégica contínua e evolução em 12 meses propostos.',
     setup: 12000, monthly: 8500, months: 12,
     instagramPosts: 24, tiktokPosts: 24, adCreatives: 20,
-    ...originalServices,
+    ...maratonaServices,
     advancedDeliverables: [
       { title: 'Estratégia · Implantação prevista', items: ['Plano de marketing aprofundado, análise de mercado e posicionamento.', 'Branding, manual de identidade visual e planejamento anual.'] },
       { title: 'Digital · Desenvolvimento progressivo', items: ['Evolução do site e e-commerce, landing pages adicionais, SEO e CRO.', 'Integrações e melhorias conforme levantamento técnico.'] },
@@ -47,11 +47,25 @@ export const proposal = {
     ],
   },
   sprint: {
-    name: 'SPRINT — PREMIUM LTDA',
-    tagline: 'Ativação dos serviços originais: presença digital, conteúdo, campanhas, comercial e inteligência artificial.',
-    description: 'Site, e-commerce, conteúdo, mídia, audiovisual, CRM, chatbot, agente de IA e treinamento inicial, com acompanhamento semanal e período inicial proposto de 90 dias.',
-    setup: 2000, monthly: 2500, months: 3, adCreatives: 20,
-    ...originalServices,
+    name: 'SPRINT — 90 DIAS',
+    tagline: 'Marketing de performance para gerar oportunidades de venda pelo WhatsApp da Construcel.',
+    description: 'Alternativa revisada de aquisição de clientes e geração de orçamentos, com produção remota, campanhas, landing page, WhatsApp organizado e CRM básico durante 90 dias. Sujeita à concordância expressa de Ana Paula com a mudança de escopo.',
+    setup: 0, monthly: 2500, months: 3, adCreatives: 8, instagramPosts: 8, campaignsPerPlatform: 2,
+    setupDeliverables: [
+      '1 landing page comercial para solicitar orçamento pelo WhatsApp, implantada no primeiro mês.',
+      'Otimização inicial do Google Perfil da Empresa.',
+      'WhatsApp Business organizado: catálogo prioritário, mensagens rápidas, etiquetas e direcionamento comercial.',
+      'CRM básico com funil para acompanhar leads e orçamentos.',
+      'Sem implantação adicional para landing page e CRM simples e padronizados.',
+    ],
+    monthlyDeliverables: [
+      'Gestão de Meta Ads e Google Ads: até 2 campanhas ativas por plataforma, com monitoramento e otimização semanal.',
+      '8 criativos publicitários por mês: peças estáticas, carrosséis ou edições simples de vídeos fornecidos pela cliente.',
+      '8 publicações mensais no Instagram, reaproveitando materiais das campanhas, sem produção de conteúdo adicional.',
+      'Acompanhamento básico do Google Perfil da Empresa.',
+      '1 reunião mensal para apresentar indicadores, resultados e próximas ações.',
+      'Produção remota com imagens e informações enviadas pela Construcel.',
+    ],
   },
   externalCosts: [
     'Verbas publicitárias.',
