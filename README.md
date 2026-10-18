@@ -35,4 +35,6 @@ A MARATONA agora possui seção de investimento e revisão de contratação em `
 Os valores e escopos atuais estão em `src/config.ts` e `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`: MARATONA R$ 8.500/mês + R$ 12.000 por 12 meses (R$ 114.000); SPRINT R$ 2.500/mês + R$ 2.000 por três meses (R$ 9.500). Substituem condições anteriores.
 
 ## Tecnologia prevista
-A seção de integrações agora detalha ferramentas recomendadas e reservas estimadas adicionais à agência/mídia: SPRINT R$ 30–100/mês; MARATONA R$ 205–705/mês. São premissas não verificadas, condicionadas a orçamento e aprovação. Nenhuma assinatura ou integração foi ativada. Não publicar planejamento financeiro interno da agência no site público.
+A seção de integrações agora detalha ferramentas recomendadas e reservas estimadas adicionais à agência/mídia: SPRINT a dimensionar após ampliação do escopo; MARATONA R$ 205–705/mês, referência preliminar a revisar. São premissas não verificadas, condicionadas a orçamento e aprovação. Nenhuma assinatura ou integração foi ativada. Não publicar planejamento financeiro interno da agência no site público.
+
+A atualização cirúrgica de escopo mantém os serviços originais no SPRINT — PREMIUM LTDA e os inclui na MARATONA — OPERAÇÃO 360°, com maior profundidade e evolução. Implantação e prazos são propostos. Veja `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`.

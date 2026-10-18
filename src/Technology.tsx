@@ -4,7 +4,7 @@ import { sections } from './config';
 
 export const technologyPlan = {
  maratona: { min:205, max:705, target:500 },
- sprint: { min:30, max:100 },
+ sprint: { pendingScope:true },
 };
 const money=(value:number)=>value.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
 const tools = [
@@ -25,8 +25,8 @@ const infrastructure = [
  ['Hospedagem do site e loja',100,100],['Domínio · reserva mensal equivalente',5,5],['CRM',0,150],['Infraestrutura de automação',50,100],['API de IA',50,150],['WhatsApp / API / provedor',0,200],
 ] as const;
 export function TechnologyBudget({offer}:{offer:'maratona'|'sprint'}) {
- const budget=technologyPlan[offer];
- return <aside className="technology-budget"><div className="technology-budget-title"><Wallet size={21}/><h3>Reserva de tecnologia · {offer.toUpperCase()}</h3></div><p className="technology-budget-value">{money(budget.min)}–{money(budget.max)}<span>/mês</span></p><p>Estimativa de planejamento para a infraestrutura da cliente, adicional aos honorários e à verba de anúncios. Não é cotação de fornecedor nem cobrança confirmada.</p>{offer==='maratona'&&<p>Meta inicial de até {money(technologyPlan.maratona.target)}/mês, condicionada a um projeto técnico que caiba nesse valor. Se não couber, as alternativas serão apresentadas antes de contratar.</p>}<p>O custo real depende de catálogo, plataformas, mensagens, consumo de APIs e integrações. Não inclui tarifas de transação nem trabalho humano. Qualquer contratação exige orçamento e aprovação prévia.</p></aside>;
+ const budget=technologyPlan.maratona;
+ return <aside className="technology-budget"><div className="technology-budget-title"><Wallet size={21}/><h3>Reserva de tecnologia · {offer.toUpperCase()}</h3></div>{offer==='sprint' ? <p className="technology-budget-value">A dimensionar</p> : <p className="technology-budget-value">{money(budget.min)}–{money(budget.max)}<span>/mês</span></p>}<p>{offer==='sprint' ? 'Site, loja, CRM, chatbot e IA exigem dimensionamento conjunto. Detalhamento na reunião de escopo.' : 'Estimativa preliminar de planejamento, a revisar com o escopo técnico.'} Infraestrutura da cliente, adicional aos honorários e à verba de anúncios. Não é cotação de fornecedor nem cobrança confirmada.</p>{offer==='maratona'&&<p>Meta inicial de até {money(technologyPlan.maratona.target)}/mês, condicionada a um projeto técnico que caiba nesse valor. Se não couber, as alternativas serão apresentadas antes de contratar.</p>}<p>O custo real depende de catálogo, plataformas, mensagens, consumo de APIs e integrações. Não inclui tarifas de transação nem trabalho humano. Qualquer contratação exige orçamento e aprovação prévia.</p></aside>;
 }
 export function EcosystemSection() {
  const index=sections.findIndex(section=>section.id==='integracoes');

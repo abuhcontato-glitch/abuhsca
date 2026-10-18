@@ -4,7 +4,7 @@ import { X } from 'lucide-react';
 
 const labels = [
  'Fachada Construcel', 'Ana Paula — protagonista', 'Maike Christian — direção', 'Grandes audiências',
- 'Campanhas e projetos criativos', 'Plano de marketing — 120 páginas', 'Manual de identidade visual',
+ 'Campanhas e projetos criativos', 'Plano de marketing aprofundado', 'Manual de identidade visual',
  'Google Meu Negócio — Perfil da Empresa', 'Domínio e hospedagem — HostGator', 'Site institucional', 'E-commerce',
  'Landing pages de conversão', 'Produção de Conteúdo', 'Meta Ads — descoberta',
  'Google Ads — intenção de compra', 'Dashboard comercial', 'SAC comercial — Atendimento omnichannel',
@@ -25,11 +25,11 @@ const displayNumber = (number: number) => String(orderedMedia.indexOf(number) + 
 const serviceDescriptions: Record<number, string> = {
  18: 'Organize oportunidades, responsáveis e tarefas em cada etapa do funil comercial.',
  19: 'Automatize perguntas frequentes e encaminhamentos com regras, menus e fluxos predefinidos.',
- 22: 'Conceito de plataforma com banner em carrossel e módulos de Diretoria, Financeiro, Faturamento, Comercial e Marketing.',
- 23: 'Projetos, tarefas, colaboração, documentação e biblioteca digital reunidos para organizar a execução.',
- 25: 'Planejamento financeiro e indicadores para acompanhar a operação com dados disponíveis e validados.',
- 26: 'Ecossistema previsto, sujeito a APIs, licenças e permissões de cada ferramenta.',
- 27: 'Fluxos demonstrativos para conectar etapas e encaminhar tarefas, com validação humana quando necessária.',
+ 22: 'Desenvolvimento progressivo · Conceito de plataforma com banner em carrossel e módulos de Diretoria, Financeiro, Faturamento, Comercial e Marketing.',
+ 23: 'Desenvolvimento progressivo · Projetos, tarefas, colaboração, documentação e biblioteca digital reunidos para organizar a execução.',
+ 25: 'Desenvolvimento progressivo · Planejamento financeiro e indicadores para acompanhar a operação com dados disponíveis e validados.',
+ 26: 'Escopo técnico adicional · Ecossistema previsto, sujeito a APIs, licenças e permissões de cada ferramenta.',
+ 27: 'Escopo técnico adicional · Fluxos demonstrativos para conectar etapas e encaminhar tarefas, com validação humana quando necessária.',
  33: 'Apoie a equipe com conversas em linguagem natural e consulta à base autorizada, com supervisão humana.',
 };
 function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
