@@ -6,11 +6,11 @@ export const proposal = {
   // Relative path to the official PNG when supplied, e.g. media/construcel/logo.png.
   logoPath: 'media/construcel/logo.png' as string | null,
   maratona: {
-    name: 'MARATONA — Premium LTDA 360°',
-    subtitle: 'PREMIUM LTDA 360°',
-    tagline: 'Marketing, vendas, tecnologia e inteligência artificial em uma operação integrada.',
-    description: 'Uma operação integrada para posicionar a Construcel, fortalecer sua presença digital, atrair oportunidades comerciais e estruturar seus processos de marketing e vendas.',
-    setup: 5000, monthly: 2500, months: 12,
+    name: 'MARATONA — Departamento Completo',
+    subtitle: 'DEPARTAMENTO COMPLETO',
+    tagline: 'Departamento completo de marketing, publicidade, tecnologia, e-commerce e inteligência artificial.',
+    description: 'Uma operação completa para a Construcel, com entregas e capacidade operacional próprias, integrando marketing, publicidade, tecnologia, e-commerce e inteligência artificial conforme escopo e cronograma contratual.',
+    setup: 12000, monthly: 8500, months: 12,
     instagramPosts: 24, tiktokPosts: 24, adCreatives: 20, monthlyVisits: 1, initialTraining: 1,
     setupDeliverables: [
       'Diagnóstico estratégico e planejamento de marketing.',
@@ -38,8 +38,9 @@ export const proposal = {
   },
   sprint: {
     name: 'SPRINT — Aquisição Comercial',
-    description: '90 dias para fortalecer a presença digital da Construcel, alcançar consumidores interessados e organizar o acompanhamento de oportunidades comerciais.',
-    setup: 2000, monthly: 1500, months: 3, adCreatives: 4,
+    tagline: 'Aquisição de clientes, campanhas, landing page e organização comercial.',
+    description: '90 dias de foco na aquisição de clientes, campanhas, landing page e organização comercial, com execução direta de Maike e escopo distinto da operação completa.',
+    setup: 2000, monthly: 2500, months: 3, adCreatives: 4,
     setupDeliverables: [
       'Diagnóstico comercial prioritário.',
       'Otimização do Perfil da Empresa no Google.',
@@ -80,5 +81,5 @@ export const sections = [
   { id: 'membros', title: 'Os membros da operação.', pillar: 'Produtividade, colaboração e conhecimento.' },
   { id: 'integracoes', title: 'Tudo conectado. Tudo sob controle.', pillar: 'Integrações e automações.' },
   { id: 'jornada', title: 'Da estratégia à execução.', pillar: 'Como vai funcionar.' },
-  { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — Premium LTDA 360°.' },
+  { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — Departamento Completo.' },
 ];

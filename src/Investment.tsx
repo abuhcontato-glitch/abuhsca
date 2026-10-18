@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { proposal, sections } from './config';
 import { expirationDate } from './dates';
 import { TechnologyBudget } from './Technology';
+import { CommercialAlignment } from './CommercialAlignment';
 
 const money = (value: number) => value.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', maximumFractionDigits: 0});
 function OfferDeliverables() {
@@ -19,7 +20,7 @@ function PriceSummary({ checkout = false }: {checkout?: boolean}) {
  const offer = proposal.maratona;
  const total = offer.setup + offer.monthly * offer.months;
  return <aside className="maratona-card" aria-label="Resumo do investimento MARATONA">
-  <div className="maratona-card-top"><span className="offer-badge">OFERTA PRINCIPAL</span><Layers3 size={25} strokeWidth={1.4}/></div>
+  <div className="maratona-card-top"><span className="offer-badge">OPÇÃO 02 · OPERAÇÃO COMPLETA</span><Layers3 size={25} strokeWidth={1.4}/></div>
   <h3>{offer.name}</h3><p className="maratona-tagline">{offer.tagline}</p>
   <p className="maratona-price">{money(offer.monthly)}<span>/mês</span></p>
   <dl className="maratona-breakdown"><div><dt>Implantação inicial</dt><dd>{money(offer.setup)}</dd></div><div><dt>Contrato</dt><dd>{offer.months} meses</dd></div><div className="maratona-total"><dt>Total contratual</dt><dd>{money(total)}</dd></div></dl>
@@ -29,7 +30,7 @@ function PriceSummary({ checkout = false }: {checkout?: boolean}) {
  </aside>;
 }
 function OfferConditions() {
- return <div className="offer-conditions"><h3>Condições e despesas adicionais</h3><p>Os honorários remuneram os serviços, a direção, a gestão e a equipe mobilizada pela ABUHSCA para executar o escopo contratado.</p><p>Não estão incluídos, salvo previsão expressa em contrato:</p><ul>{proposal.externalCosts.map(cost=><li key={cost}>{cost}</li>)}</ul><p>Os custos externos devem ser previamente orçados e aprovados pela contratante. A equipe necessária ao escopo contratado não representa uma cobrança adicional automática.</p><p>Estas são condições comerciais propostas, não uma validação de rentabilidade nem cotações verificadas do mercado de Brasília. Antes da assinatura, o Premium exige auditoria do catálogo e orçamento real de produção, IA e integrações, com avaliação de custos, impostos e capacidade de entrega.</p><p>A implantação será progressiva, conforme cronograma e dependências técnicas acordadas. O levantamento inicial definirá o volume do catálogo, integrações necessárias e responsabilidades pelo fornecimento de informações e acessos. Implantação e custos externos serão explicados e negociados previamente com Ana Paula.</p><p>Não há garantia de quantidade específica de leads, vendas ou faturamento.</p></div>;
+ return <div className="offer-conditions"><h3>Condições e despesas adicionais</h3><p>Os honorários remuneram os serviços, a direção, a gestão e a equipe mobilizada pela ABUHSCA para executar o escopo contratado.</p><p>Não estão incluídos, salvo previsão expressa em contrato:</p><ul>{proposal.externalCosts.map(cost=><li key={cost}>{cost}</li>)}</ul><p>Os custos externos devem ser previamente orçados e aprovados pela contratante. A equipe necessária ao escopo contratado não representa uma cobrança adicional automática.</p><p>Estas são condições comerciais propostas, não uma validação de rentabilidade nem cotações verificadas do mercado de Brasília. Antes da assinatura, a MARATONA exige auditoria do catálogo e orçamento real de produção, IA e integrações, com avaliação de custos, impostos e capacidade de entrega.</p><p>A implantação será progressiva, conforme cronograma e dependências técnicas acordadas. O levantamento inicial definirá o volume do catálogo, integrações necessárias e responsabilidades pelo fornecimento de informações e acessos. Implantação e custos externos serão explicados e negociados previamente com Ana Paula.</p><p>Não há garantia de quantidade específica de leads, vendas ou faturamento.</p><CommercialAlignment/></div>;
 }
 export function InvestmentSection() {
  const index = sections.findIndex(section=>section.id==='investimento');

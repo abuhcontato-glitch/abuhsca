@@ -32,7 +32,7 @@ A página será pública, incluindo os arquivos de mídia e o conteúdo SPRINT n
 ## Ofertas comerciais
 A MARATONA agora possui seção de investimento e revisão de contratação em `/construcel/contratacao/maratona`. A SPRINT tem página completa em `/construcel/sprint`, acessada por Liberar SPRINT no final da proposta principal, e revisão independente em `/construcel/contratacao/sprint`. A liberação é visual, sem autenticação de servidor. As páginas permitem revisar preços, escopo e condições; pagamentos, assinatura e onboarding ainda não estão integrados. Conteúdo e valores da MARATONA estão em `src/config.ts`; comparação e conteúdo SPRINT em `src/Sprint.tsx`.
 
-Os valores e escopos atuais estão em `src/config.ts` e `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`: MARATONA R$ 2.500/mês + R$ 5.000 por 12 meses (R$ 35.000); SPRINT R$ 1.500/mês + R$ 2.000 por três meses (R$ 6.500). Substituem condições anteriores.
+Os valores e escopos atuais estão em `src/config.ts` e `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`: MARATONA R$ 8.500/mês + R$ 12.000 por 12 meses (R$ 114.000); SPRINT R$ 2.500/mês + R$ 2.000 por três meses (R$ 9.500). Substituem condições anteriores.
 
 ## Tecnologia prevista
 A seção de integrações agora detalha ferramentas recomendadas e reservas estimadas adicionais à agência/mídia: SPRINT R$ 30–100/mês; MARATONA R$ 205–705/mês. São premissas não verificadas, condicionadas a orçamento e aprovação. Nenhuma assinatura ou integração foi ativada. Não publicar planejamento financeiro interno da agência no site público.
