@@ -63,3 +63,10 @@ Build e nove testes passaram. Browser validou as três entradas, escopo proposto
 
 ### Atualização de preço TRAÇÃO
 Mensalidade centralizada em `tractionOffer.monthly`: R$ 5.500; seis meses propostos; implantação adicional zero para landing/CRM simples e padronizados; honorários R$ 33.000. Card, detalhes e resumo de solicitação usam os mesmos dados. Substitui a indicação anterior “Sob proposta”; despesas externas e aceite continuam separados.
+
+## Separação em propostas individuais — atualização vigente
+A entrada `/construcel` mantém o hero, apresentação e escolha, encerrando antes da metodologia. Cada card abre um documento completo: SPRINT em `/construcel/sprint` (dez seções), TRAÇÃO em `/construcel/tracao` (dez seções) e MARATONA em `/construcel/maratona` (nove seções / 24 mockups). A TRAÇÃO deixou de ser um painel expansível: possui hero, direção, metodologia aplicada, aquisição, conteúdo, conversão, CRM, cronograma, escopo/comparação e investimento, com o mesmo padrão visual e faixas. A MARATONA preserva os conteúdos existentes em seu endereço próprio. Não há mais liberação adicional do SPRINT.
+
+Configuração, comparação, catálogo de adicionais e cálculos contemplam os três planos. TRAÇÃO: R$ 5.500/mês por seis meses propostos, total R$ 33.000. `CommercialContext` usa o plano da rota, com seleções independentes por oferta. Trocar plano navega para seu documento ou sua revisão. As revisões existentes são preservadas e a TRAÇÃO ganha revisão própria, sem pagamento ativo. A cópia do resumo e o orçamento de adicionais usam somente o escopo e o valor da proposta aberta.
+
+Validação: dez testes automatizados; build de produção; três documentos e revisões com navegação, acesso direto, recarga, quantidades e resumos isolados; preservação das imagens e ampliações; 320, 390, 768 e 1440 px. Corrigida a largura do título TRAÇÃO em celular.

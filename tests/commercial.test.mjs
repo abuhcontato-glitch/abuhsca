@@ -49,3 +49,11 @@ test('freelancer quote never includes plan allowance, monthly fee or contract to
  const catalog=[{...serviceCatalog[0],unitPrice:50},{...serviceCatalog[1],unitPrice:20,billing:'monthly'}];
  const priced=calculateFreelanceQuote({art:2,carousel:3},catalog);assert.equal(priced.knownTotal,100);assert.equal(priced.monthly,60);
 });
+
+test('TRAÇÃO has its own six-month contract, allowances and quote summary',()=>{
+ const quote=calculateQuote('tracao',{});assert.equal(quote.monthly,5500);assert.equal(quote.baseTotal,33000);assert.equal(quote.knownTotal,33000);
+ const capture=quoteLines('tracao',{capture:1})[0];assert.equal(capture.additional,true);assert.equal(capture.subtotal,null);
+ assert.equal(quoteLines('tracao',{agent:1})[0].additional,false);
+ assert.match(serviceCatalog.find(service=>service.id==='content').availability.tracao.included,/16/);
+ const summary=commercialSummary('tracao',{capture:1});assert.match(summary,/6 meses/);assert.match(summary,/33.000/);assert(!summary.includes('114.000'));assert(!summary.includes('7.500'));assert.match(summary,/TRAÇÃO/);
+});

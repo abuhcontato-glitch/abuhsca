@@ -37,3 +37,6 @@ A Construcel continua responsável por atender, atualizar orçamentos e fechar v
 
 ### Preço definido para a TRAÇÃO
 A TRAÇÃO passa a ser oferecida por **R$ 5.500/mês**, valor intermediário entre R$ 2.500 e R$ 8.500. Prazo proposto de seis meses, total de honorários **R$ 33.000**. Sem implantação adicional para landing page e CRM simples e padronizados, preservando a condição da base SPRINT. Custos externos separados, com aprovação. Esta definição substitui as referências anteriores a preço TRAÇÃO pendente / sob proposta. Escopo e contratação seguem sujeitos ao aceite da Construcel.
+
+## Apresentações independentes
+Os três preços e escopos possuem documentos individuais: `/construcel/sprint`, `/construcel/tracao` e `/construcel/maratona`. A entrada `/construcel` é somente apresentação e escolha. A troca no seletor/comparativo abre a respectiva proposta; os adicionais e os totais contratuais permanecem separados. Revisões também são individuais, sem cobrança automática.
