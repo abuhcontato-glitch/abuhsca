@@ -28,3 +28,6 @@ O workflow `.github/workflows/pages.yml` publica a branch `main` após testes e 
 Build para Pages: `npm run build -- --base=/abuhsca/`. Nesse destino a aplicação usa rotas por hash para suportar acesso direto e atualização de página sem servidor de fallback. URL prevista, a confirmar após deploy: `https://abuhcontato-glitch.github.io/abuhsca/#/construcel`.
 
 A página será pública, incluindo os arquivos de mídia e o conteúdo SPRINT no bundle. O botão Liberar SPRINT apenas controla a exibição e não oferece confidencialidade. Não há pagamentos ativos. O site ainda é uma apresentação em desenvolvimento.
+
+## Ofertas comerciais
+A MARATONA agora possui seção de investimento e revisão de contratação em `/construcel/contratacao/maratona`. A SPRINT tem página completa em `/construcel/sprint`, acessada por Liberar SPRINT no final da proposta principal, e revisão independente em `/construcel/contratacao/sprint`. A liberação é visual, sem autenticação de servidor. As páginas permitem revisar preços, escopo e condições; pagamentos, assinatura e onboarding ainda não estão integrados. Conteúdo e valores da MARATONA estão em `src/config.ts`; comparação e conteúdo SPRINT em `src/Sprint.tsx`.

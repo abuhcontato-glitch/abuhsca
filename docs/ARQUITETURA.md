@@ -124,3 +124,13 @@ A pedido do usuário, Membros passa de três para dois cards: Projetos, produtiv
 
 ## Jornada explicativa — seis etapas
 Seção Da estratégia à execução implementada com seis blocos HTML e ícones: contratação digital, onboarding, planejamento/TREAD, implantação, gestão por indicadores e acompanhamento. Explicações incluem primeiro mês de bases, implantação gradual, até 10 KPIs por departamento conforme dados e suporte em horário comercial. Contratação continua com integrações pendentes claramente indicadas. Duas imagens refeitas: infográfico de seis etapas e montagem demonstrativa de reunião de alinhamento com Maike e Ana Paula. Não são comprovação de reunião realizada nem sistemas já ativos.
+
+## Oferta principal e revisão da contratação MARATONA
+Seção de investimento implementada como card MARATONA — Operação 360°, com conteúdo e preços centralizados em proposal.maratona. Mensalidade R$ 12.000, implantação R$ 60.000, 12 meses; total calculado de R$ 204.000. CTA abre /construcel/contratacao/maratona, agora página de revisão com etapas previstas, resumo e condições. Assinatura/pagamento permanecem indisponíveis e explicitamente indicados; sem cobrança, coleta de cartão, contrato definitivo ou avanço fictício a onboarding. Custos externos e validade pendente discriminados. Escopo conforme texto fornecido pelo usuário e cronograma contratual.
+
+## Página completa SPRINT e comparação
+SPRINT ampliada para dez seções próprias: abertura, direção de Maike, prioridades, Google Business Profile, campanhas, landing page, WhatsApp/CRM simplificado, cronograma de três meses, comparação e investimento. Utiliza somente imagens relevantes ao escopo e esclarece recursos adicionais ilustrativos não incluídos. Tabela com oito linhas conforme instrução do usuário: objetivo, equipe, site/e-commerce, CRM completo, tráfego pago, conteúdo recorrente, treinamento e prazo. Os 70% representam diferença sobre mensalidade de referência, não o mesmo produto com desconto.
+
+Liberar SPRINT na MARATONA revela um resumo com acesso à página completa. Acesso direto à página começa em liberação visual; não é autenticação. Comparação e condições não afirmam cotações de mercado verificadas. Custos externos e validação prévia de profissionais, ferramentas, impostos e capacidade de entrega discriminados.
+
+Checkout SPRINT independente em /construcel/contratacao/sprint: revisão de escopo, R$ 3.600/mês + implantação R$ 3.000 por três meses, total calculado R$ 13.800. Assinatura/pagamento e onboarding seguem dependentes de integrações, sem cobranças nem coleta de cartão. Checkout MARATONA mantém R$ 12.000/mês + R$ 60.000 por 12 meses, total R$ 204.000. Ambos validados em quatro larguras de tela, navegação direta e recarga.

@@ -5,7 +5,12 @@ export const proposal = {
   validityMonths: 3,
   // Relative path to the official PNG when supplied, e.g. media/construcel/logo.png.
   logoPath: 'media/construcel/logo.png' as string | null,
-  maratona: { setup: 60000, monthly: 12000, months: 12 },
+  maratona: {
+    name: 'MARATONA — Operação 360°',
+    tagline: 'ABUHSCA como direção estratégica de marketing, comercial e operações.',
+    description: 'Inclui direção estratégica, coordenação de especialistas, planejamento, branding, estrutura digital, conteúdo, gestão de campanhas, CRM, automações, treinamento e gestão operacional, conforme cronograma contratual.',
+    setup: 60000, monthly: 12000, months: 12,
+  },
   sprint: { setup: 3000, monthly: 3600, months: 3 },
   integrations: { authentication: false, signature: false, payment: false, scheduling: false },
 };
@@ -18,5 +23,5 @@ export const sections = [
   { id: 'membros', title: 'Os membros da operação.', pillar: 'Produtividade, colaboração e conhecimento.' },
   { id: 'integracoes', title: 'Tudo conectado. Tudo sob controle.', pillar: 'Integrações e automações.' },
   { id: 'jornada', title: 'Da estratégia à execução.', pillar: 'Como vai funcionar.' },
-  { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — Transformação completa Construcel.' },
+  { id: 'investimento', title: 'Um investimento. Uma nova estrutura para crescer.', pillar: 'MARATONA — Operação 360°.' },
 ];
