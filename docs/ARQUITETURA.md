@@ -115,3 +115,6 @@ Mockup atualizado com configuração de campanha, segmentação, fluxo de relaci
 
 ## Treinamento comercial com Maike
 Imagem de treinamento atualizada para montagem demonstrativa com Maike como instrutor, usando seu retrato fornecido como referência. Equipe e cena são ilustrativas, não comprovação de treinamento realizado. Texto alternativo identifica a montagem; imagem integral sem faixa externa.
+
+## Universidade Construcel — experiência de streaming
+Mockup EAD atualizado com banner de destaque, setas/indicadores de carrossel, trilhas e continuação de aulas. Módulos solicitados: Diretoria, Financeiro, Faturamento, Comercial e Marketing. Visual próprio na identidade Construcel. O banner é representação estática; não há carrossel funcional, cursos ou plataforma EAD implementados nesta entrega de imagem.

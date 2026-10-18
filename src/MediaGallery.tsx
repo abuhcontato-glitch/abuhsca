@@ -24,11 +24,12 @@ const displayNumber = (number: number) => String(number === 33 ? 20 : number >= 
 const serviceDescriptions: Record<number, string> = {
  18: 'Organize oportunidades, responsáveis e tarefas em cada etapa do funil comercial.',
  19: 'Automatize perguntas frequentes e encaminhamentos com regras, menus e fluxos predefinidos.',
+ 22: 'Conceito de plataforma com banner em carrossel e módulos de Diretoria, Financeiro, Faturamento, Comercial e Marketing.',
  33: 'Apoie a equipe com conversas em linguagem natural e consulta à base autorizada, com supervisão humana.',
 };
 function CroppedImage({ number, eager = false }: { number: number; eager?: boolean }) {
  const [width, height] = dimensions[String(number) as keyof typeof dimensions];
- const replacements: Record<number, string> = { 6: 'plano-marketing-construcel.png', 7: 'manual-identidade-construcel.png', 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png', 10: 'site-institucional-construcel.png', 11: 'ecommerce-construcel.png', 12: 'landingpage-formulario-chatbot.png', 13: 'producao-conteudo-ana-paula-maike.png', 14: 'meta-ads-construcel.png', 15: 'google-ads-construcel.png', 16: 'dashboard-comercial-construcel.png', 17: 'atendimento-omnichannel-construcel.png', 18: 'crm-kanban-construcel.png', 19: 'chatbot-fluxos-construcel.png', 20: 'email-marketing-construcel.png', 21: 'treinamento-comercial-maike.png', 33: 'agente-ia-construcel.png' };
+ const replacements: Record<number, string> = { 6: 'plano-marketing-construcel.png', 7: 'manual-identidade-construcel.png', 8: 'google-meu-negocio.png', 9: 'hostgator-dominio-hospedagem.png', 10: 'site-institucional-construcel.png', 11: 'ecommerce-construcel.png', 12: 'landingpage-formulario-chatbot.png', 13: 'producao-conteudo-ana-paula-maike.png', 14: 'meta-ads-construcel.png', 15: 'google-ads-construcel.png', 16: 'dashboard-comercial-construcel.png', 17: 'atendimento-omnichannel-construcel.png', 18: 'crm-kanban-construcel.png', 19: 'chatbot-fluxos-construcel.png', 20: 'email-marketing-construcel.png', 21: 'treinamento-comercial-maike.png', 22: 'universidade-construcel-streaming.png', 33: 'agente-ia-construcel.png' };
  const imageFile = replacements[number] ?? `${String(number).padStart(2,'0')}.png`;
  const uncropped = number in replacements;
  return <div className={`media-crop ${uncropped ? 'media-uncropped' : ''}`} style={{ aspectRatio: width / (height * (uncropped ? 1 : .8)) }}>
