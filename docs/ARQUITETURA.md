@@ -109,3 +109,6 @@ Card 17 atualizado para mockup de caixa de entrada unificada, conversa ativa e d
 
 ## CRM Kanban, Chatbot e Agente de IA
 CRM atualizado para identidade Construcel. O card combinado Chatbot/IA foi separado: Chatbot apresenta regras, menus e fluxos; Agente de IA apresenta consulta a conhecimento autorizado e apoio supervisionado. Três mockups independentes com descrições HTML, todos demonstrativos. O agente usa ID interno 33 e aparece imediatamente após Chatbot; numeração visual dos cards posteriores ajustada para manter sequência. Nenhuma automação ou integração foi ativada.
+
+## E-mail marketing — identidade Construcel
+Mockup atualizado com configuração de campanha, segmentação, fluxo de relacionamento e prévia responsiva de newsletter. Imagem demonstrativa com logo e paleta Construcel, sem faixa de título externa. Nenhuma mensagem foi enviada, campanha ativada ou base de contatos integrada.
