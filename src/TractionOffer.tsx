@@ -1,3 +1,4 @@
+import { ProposalFaq } from './ProposalFaq';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ArrowUpRight, TrendingUp, Target, Video, MessagesSquare } from 'lucide-react';
@@ -22,5 +23,6 @@ export function TractionPage(){
   <ProposalBlock id="tracao-cronograma" index={8} title="Seis meses. Evolução com acompanhamento." eyebrow="CRONOGRAMA PROPOSTO" offer="TRAÇÃO"><div className="sprint-timeline">{[['MÊS 01','Implantar.','Diagnóstico, acessos, planejamento da landing page, site oficial, chatbot, CRM básico e campanhas, planejamento de conteúdo e treinamento remoto inicial.'],['MESES 02–03','Ganhar ritmo.','Captações programadas, publicações, ajustes das campanhas e implementação da rotina de acompanhamento dos orçamentos.'],['MESES 04–06','Consolidar.','Otimização de criativos, públicos e prioridades comerciais, revisão dos indicadores e plano de continuidade.']].map(([period,title,text],i)=><div key={period}><span className="timeline-number">0{i+1}</span><p className="eyebrow">{period}</p><h3>{title}</h3><p>{text}</p></div>)}</div><p className="price-note">Sequência proposta, sujeita ao aceite, acessos e cronograma acordado. Não há garantia de quantidade de leads, vendas ou faturamento.</p></ProposalBlock>
 
   <ProposalBlock id="tracao-investimento" index={9} title="Marketing e vendas na mesma direção." eyebrow="INVESTIMENTO TRAÇÃO" offer="TRAÇÃO"><div className="sprint-grid"><PlanDeliverables/><PriceSummary appearance="sprint"/></div><TractionConditions/><div className="sprint-closing"><p>PRODUZIR COM CONSISTÊNCIA.</p><strong>ACOMPANHAR CADA OPORTUNIDADE.</strong><ArrowRight size={28}/></div></ProposalBlock>
+ <ProposalFaq plan={"tracao"}/>
  </main><footer className="sprint-document-footer"><Link to="/construcel">Escolher outra proposta</Link><SectionLink id="tracao-inicio">Voltar ao topo ↑</SectionLink></footer></>;
 }

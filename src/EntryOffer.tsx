@@ -1,3 +1,4 @@
+import { ProposalFaq } from './ProposalFaq';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Target, Compass, ListChecks, ChartNoAxesCombined } from 'lucide-react';
@@ -21,5 +22,6 @@ export function EntryOffer({plan}:{plan:'base'|'arranque'}) {
  <ProposalBlock id={`${plan}-cronograma`} index={7} title="Um primeiro ciclo para começar." eyebrow="30 DIAS INICIAIS PROPOSTOS" offer={label} total={8}><div className="sprint-timeline">{[['Preparar.',ad?'Reunir materiais, acessos, objetivo e aprovação da oferta.':'Reunir informações e perguntas para a sessão.'],[ad?'Ativar.':'Orientar.',ad?'Configurar a campanha aprovada, publicar e otimizar semanalmente.':'Realizar a reunião remota de até 45 minutos e registrar prioridades.'],['Revisar.',ad?'Apresentar indicadores em relatório e reunião de até 30 minutos.':'Concluir os próximos passos e combinar eventual continuidade.']].map(([title,text],i)=><div key={title}><span className="timeline-number">0{i+1}</span><h3>{title}</h3><p>{text}</p></div>)}</div><p className="price-note">Ciclo e continuidade sujeitos ao aceite e ao cronograma combinado. Não há garantia de volume de leads, vendas ou faturamento.</p></ProposalBlock>
 
  <ProposalBlock id={`${plan}-investimento`} index={8} title="Investimento e condições." eyebrow={`INVESTIMENTO ${label}`} offer={label} total={8}><div className="sprint-grid"><PlanDeliverables/><PriceSummary appearance="sprint"/></div><OfferConditions/></ProposalBlock>
+ <ProposalFaq plan={plan}/>
  </main><footer className="sprint-document-footer"><Link to="/construcel">Escolher outra proposta</Link><SectionLink id={`${plan}-inicio`}>Voltar ao topo ↑</SectionLink></footer></>;
 }

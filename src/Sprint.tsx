@@ -1,3 +1,4 @@
+import { ProposalFaq } from './ProposalFaq';
 import { useEffect, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight, ArrowLeft, Check, Plus, Minus, Zap, LockKeyhole, Target, Search, MessageCircle } from 'lucide-react';
@@ -34,6 +35,7 @@ function SprintDocument() {
  <ProposalBlock id="sprint-cronograma" index={8} title="Três meses. Prioridades claras." eyebrow="PERÍODO INICIAL PROPOSTO · 90 DIAS"><div className="sprint-timeline">{timeline.map(([title,description],index)=><div key={title}><span className="timeline-number">0{index+1}</span><p className="eyebrow">MÊS 0{index+1}</p><h3>{title}</h3><p>{description}</p></div>)}</div><div className="sprint-alignment"><h3>1 reunião mensal de acompanhamento</h3><p>Revisão das ações e dos contatos, ajustes de prioridade e definição dos próximos passos. A sequência é uma proposta de trabalho; marcos, implantação e dependências serão definidos na reunião de escopo. Sem promessa de resultado garantido.</p></div></ProposalBlock>
 
  <ProposalBlock id="sprint-investimento" index={9} title="Aquisição com foco e medida." eyebrow="INVESTIMENTO SPRINT"><div className="sprint-grid"><div><PlanDeliverables/></div><PriceSummary appearance="sprint"/></div><SprintConditions/><div className="sprint-closing"><p>FOCO EM AQUISIÇÃO. CONTINUIDADE COMERCIAL.</p><strong>O SPRINT FOCA EM ANÚNCIOS E ORÇAMENTOS.</strong><ArrowRight size={28}/></div></ProposalBlock>
+ <ProposalFaq plan={"sprint"}/>
  </main><footer className="sprint-document-footer"><Link to="/construcel">ABUHSCA × CONSTRUCEL</Link><SectionLink id="sprint-inicio">Voltar ao topo ↑</SectionLink></footer></>;
 }
 export function SprintPage() {return <SprintDocument/>;}
