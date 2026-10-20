@@ -19,3 +19,7 @@ Peça original `Bem-vindo (Feed).png` recebida em ZIP acessível e adicionada à
 ## Manual incorporado
 
 PDF comprimido recebido (735.239 bytes), examinado e incorporado. 18 páginas originais disponíveis antes do vídeo, com prévias JPEG, seletor de página, anterior/próxima e links para abrir ou baixar o PDF. Conteúdo: conceito, versões, cores, área de proteção, redução, fundos, usos incorretos, grafismos, tipografia e aplicações. Build aprovado. Navegador: carregamento das 18 prévias, navegação e limites, PDF acessível, vídeo/arte preservados e larguras 320, 390, 768 e 1440 px.
+
+## Produtos incorporados
+
+MOCKUPS.zip recebido e examinado: nove imagens originais (agenda, boné, caneca de chopp, chaveiro, chinelo, copo térmico, ecobag, kit térmico e pin). Galeria Design de produtos entre manual e vídeo, acesso no menu do case e ampliação em diálogo nativo. Imagens preservadas integralmente. Verificação no navegador: nove imagens e ampliações, fechamento por Escape e restauração de foco, quatro larguras de tela; manual, vídeo e arte de boas-vindas preservados. Build de produção aprovado.
