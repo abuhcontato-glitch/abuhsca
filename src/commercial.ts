@@ -85,6 +85,72 @@ export const serviceCatalog: Service[] = [
  service('financial-kpis','Processos e gestão','Painel de indicadores financeiros','Organização e visualização dos dados financeiros fornecidos.','painel',none),
 
 ];
+// Tabela sugerida para pedidos avulsos; validar valores e escopo antes do aceite.
+const freelanceRates: Record<string,readonly [number,string]> = {
+ 'art':[120,'1 peça estática e 1 formato'],
+ 'carousel':[300,'até 5 cards'],
+ 'identity':[3500,'logotipo, paleta, tipografia e até 3 aplicações'],
+ 'print':[250,'1 peça gráfica de até 2 faces'],
+ 'reels':[250,'1 vídeo de até 60 segundos com material fornecido'],
+ 'ad-video':[450,'1 edição de até 60 segundos com material fornecido'],
+ 'capture':[1200,'1 sessão de até 3 horas com 1 profissional'],
+ 'full-video':[3000,'1 vídeo de até 90 segundos, 1 sessão de até 3 horas'],
+ 'landing':[1500,'1 página de até 6 seções e formulário'],
+ 'site':[3500,'até 5 páginas institucionais'],
+ 'ecommerce':[6500,'1 loja padrão e cadastro inicial de até 20 produtos'],
+ 'page':[500,'1 página de até 5 seções em site existente'],
+ 'campaign':[600,'planejamento e configuração de 1 campanha em 1 plataforma'],
+ 'content':[600,'1 calendário de até 12 pautas'],
+ 'consulting':[350,'1 sessão remota de até 60 minutos'],
+ 'diagnosis':[800,'análise de até 3 canais e relatório de prioridades'],
+ 'chatbot':[1500,'1 canal com até 10 etapas de fluxo'],
+ 'automation':[800,'1 fluxo com até 3 etapas'],
+ 'agent':[3500,'1 agente, 1 canal e até 20 documentos de base'],
+ 'integration':[1200,'conexão de 2 ferramentas por API disponível'],
+ 'marketing-plan':[2500,'1 marca, diagnóstico e plano de ação de 90 dias'],
+ 'market-analysis':[1200,'1 segmento e até 5 concorrentes'],
+ 'positioning':[1800,'1 marca, proposta de valor e direção de comunicação'],
+ 'annual-plan':[2000,'1 calendário estratégico de 12 meses para 1 marca'],
+ 'brand-manual':[1800,'até 20 páginas para identidade existente'],
+ 'logo':[1500,'1 direção criativa e versões finais'],
+ 'presentation':[700,'até 10 slides com conteúdo fornecido'],
+ 'script':[300,'1 roteiro de até 90 segundos'],
+ 'content-shoot':[1800,'1 sessão de até 3 horas e 4 vídeos de até 60 segundos'],
+ 'advertising-production':[4500,'1 filme de até 90 segundos e 1 diária de até 6 horas'],
+ 'event-production':[2200,'cobertura de até 4 horas e 1 vídeo-resumo de até 90 segundos'],
+ 'seo':[1000,'auditoria e ajustes iniciais em até 5 páginas'],
+ 'cro':[900,'análise e até 3 ajustes em 1 página'],
+ 'domain-hosting':[250,'1 domínio e 1 hospedagem'],
+ 'product-catalog':[400,'lote de até 20 produtos com dados e imagens fornecidos'],
+ 'checkout':[900,'1 provedor em plataforma compatível'],
+ 'quote-form':[350,'1 formulário de até 8 campos'],
+ 'google-profile':[450,'1 unidade e otimização inicial'],
+ 'meta-campaign':[700,'1 campanha por 30 dias, até 2 conjuntos e otimização semanal'],
+ 'google-campaign':[800,'1 campanha por 30 dias, até 2 grupos e otimização semanal'],
+ 'instagram-post':[150,'1 publicação estática e legenda'],
+ 'tiktok-content':[300,'1 vídeo de até 60 segundos com material fornecido'],
+ 'remarketing':[600,'1 campanha por 30 dias em 1 plataforma'],
+ 'email-campaign':[450,'1 e-mail, 1 segmento e 1 disparo em ferramenta existente'],
+ 'crm-basic':[1200,'1 funil com até 6 etapas e até 3 usuários'],
+ 'crm-advanced':[3000,'até 3 funis, 10 usuários e 3 automações'],
+ 'whatsapp':[400,'1 número, até 10 produtos e 10 respostas rápidas'],
+ 'omnichannel':[2200,'até 3 canais compatíveis e 5 atendentes'],
+ 'sales-process':[1000,'1 roteiro comercial e cadência de até 5 contatos'],
+ 'dashboard':[1800,'1 painel com até 8 indicadores e 2 fontes'],
+ 'knowledge':[900,'organização de até 20 documentos fornecidos'],
+ 'calendar':[350,'1 agenda com até 3 tipos de atendimento'],
+ 'sales-training':[900,'1 sessão de até 2 horas para até 10 pessoas'],
+ 'team-training':[700,'1 sessão remota de até 2 horas para até 10 pessoas'],
+ 'workshop':[1200,'1 encontro de até 3 horas para até 15 pessoas'],
+ 'ead':[3500,'configuração de plataforma padrão, 5 módulos e até 10 aulas fornecidas'],
+ 'project-management':[900,'1 espaço de trabalho, até 3 projetos e 10 usuários'],
+ 'internal-processes':[1500,'mapeamento de até 3 processos e responsabilidades'],
+ 'financial-kpis':[1800,'1 painel com até 8 indicadores e 2 fontes fornecidas'],
+};
+export const freelanceCatalog:Service[]=serviceCatalog.map(service=>{
+ const [unitPrice,scope]=freelanceRates[service.id];
+ return {...service,unitPrice,description:`${service.description} Escopo de referência: ${scope}. Até 2 rodadas de ajustes no escopo contratado.`};
+});
 export type Quantities = Record<string, number>;
 export const normalizeQuantity = (value: number) => Number.isFinite(value) ? Math.min(99,Math.max(0,Math.floor(value))) : 0;
 export function quoteLines(plan: PlanId, quantities: Quantities, catalog: Service[] = serviceCatalog) {
@@ -150,7 +216,7 @@ export const comparisonRows: ComparisonRow[] = [
  row('Universidade Construcel',null,'Desenvolvimento progressivo / EAD'),
 ];
 
-export function calculateFreelanceQuote(quantities: Quantities, catalog: Service[] = serviceCatalog) {
+export function calculateFreelanceQuote(quantities: Quantities, catalog: Service[] = freelanceCatalog) {
  const quote=calculateQuote('sprint',quantities,catalog);
  const lines=quote.lines.map(line=>({...line,additional:false}));
  return {...quote,lines,baseTotal:0,knownTotal:quote.once,monthly:quote.recurring,pending:lines.filter(line=>line.subtotal===null)};
@@ -160,8 +226,11 @@ export function freelanceSummary(quantities: Quantities) {
  return ['SOLICITAÇÃO DE ORÇAMENTO FREELANCER — NÃO É CONTRATO',
   `Cliente: ${proposal.company}`,`Agência: ${proposal.agency}`,
   'Modalidade: serviços individuais, sem adesão a plano e sem mensalidade de plano.',
-  ...quote.lines.map(line=>`- ${line.quantity} × ${line.service.name} (${line.service.unit}; ${line.service.billing==='monthly'?'recorrente mensal':'avulso único'}): ${line.subtotal===null?'Sob orçamento':money(line.subtotal)}`),
+  'Tabela sugerida de serviços avulsos. Valores e escopo sujeitos à confirmação antes do aceite.',
+  ...quote.lines.map(line=>`- ${line.quantity} × ${line.service.name} (${line.service.unit}; ${line.service.billing==='monthly'?'recorrente mensal':'avulso único'}; unitário ${line.service.unitPrice===null?'Sob orçamento':money(line.service.unitPrice)}): ${line.subtotal===null?'Sob orçamento':money(line.subtotal)}`),
   ...(!quote.lines.length?['Nenhum serviço selecionado.']:[]),
+  ...quote.lines.map(line=>`Escopo — ${line.service.name}: ${line.service.description}`),
+  `Total estimado do pedido: ${money(quote.once)}${quote.pending.length?' + itens sob orçamento':''}`,
   `Subtotal avulso conhecido: ${quote.lines.some(line=>line.subtotal!==null&&line.service.billing==='once')?money(quote.once):'Sem valores cadastrados'}`,
   `Recorrentes de serviços selecionados: ${quote.lines.some(line=>line.subtotal!==null&&line.service.billing==='monthly')?money(quote.recurring)+'/mês':'Nenhum com preço cadastrado'}`,
   `Serviços sob orçamento: ${quote.pending.map(line=>line.service.name).join(', ')||'Nenhum selecionado'}`,

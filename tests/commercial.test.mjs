@@ -43,8 +43,8 @@ test('commercial summary includes scope consent, pending work and unapproved ext
 test('freelancer quote never includes plan allowance, monthly fee or contract total',async()=>{
  const {calculateFreelanceQuote,freelanceSummary}=await import('../src/commercial.ts');
  const quote=calculateFreelanceQuote({art:2,ecommerce:1});
- assert.equal(quote.baseTotal,0);assert.equal(quote.knownTotal,0);assert.equal(quote.monthly,0);
- assert(quote.lines.every(line=>!line.additional));assert.equal(quote.pending.length,2);
+ assert.equal(quote.baseTotal,0);assert.equal(quote.knownTotal,6740);assert.equal(quote.monthly,0);
+ assert(quote.lines.every(line=>!line.additional));assert.equal(quote.pending.length,0);
  const summary=freelanceSummary({art:2});assert.match(summary,/sem mensalidade de plano/);assert(!summary.includes('7.500'));assert(!summary.includes('114.000'));assert(!summary.includes('2.500'));
  const catalog=[{...serviceCatalog[0],unitPrice:50},{...serviceCatalog[1],unitPrice:20,billing:'monthly'}];
  const priced=calculateFreelanceQuote({art:2,carousel:3},catalog);assert.equal(priced.knownTotal,100);assert.equal(priced.monthly,60);
@@ -79,4 +79,16 @@ test('full freelance catalog has unique services and accent-insensitive category
  const category=serviceCatalog[0].category;
  assert(filterServiceCatalog(category,'').every(service=>service.category===category));
  assert.deepEqual(filterServiceCatalog('Todas','zzzzsemresultado'),[]);
+});
+
+
+test('freelance suggested rates cover the catalog and totals respond to quantities and removal',async()=>{
+ const {freelanceCatalog,calculateFreelanceQuote,freelanceSummary}=await import('../src/commercial.ts');
+ assert.equal(freelanceCatalog.length,serviceCatalog.length);
+ assert(freelanceCatalog.every(service=>Number.isFinite(service.unitPrice)&&service.unitPrice>0&&service.description.includes('Escopo de referência')));
+ assert(serviceCatalog.every(service=>service.unitPrice===null));
+ assert.equal(calculateFreelanceQuote({art:2,landing:1}).knownTotal,1740);
+ assert.equal(calculateFreelanceQuote({art:0,landing:1}).knownTotal,1500);
+ assert.equal(calculateFreelanceQuote({}).knownTotal,0);
+ const summary=freelanceSummary({art:2,landing:1});assert.match(summary,/1.740,00/);assert.match(summary,/unitário/);assert.match(summary,/Tabela sugerida/);assert.match(summary,/Escopo —/);
 });
