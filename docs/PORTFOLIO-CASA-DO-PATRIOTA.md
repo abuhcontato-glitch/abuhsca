@@ -13,3 +13,5 @@ Vídeo original de 44 segundos recebido e incorporado com controles nativos, rep
 O manual `231031_manual_marca.pdf` também excedeu o limite de transferência de 32 MiB. Continua pendente em versão comprimida ou dividida. Design de produtos e demais peças seguem pendentes dos arquivos acessíveis.
 
 Build de produção aprovado; verificar entrega do MP4 e suporte a Range no preview com base `/abuhsca/`.
+
+Peça original `Bem-vindo (Feed).png` recebida em ZIP acessível e adicionada à seção Material de divulgação. PNG 1080 × 1080 preservado integralmente, com link para abrir o original em nova aba, texto alternativo e layout fluido. Build aprovado.
