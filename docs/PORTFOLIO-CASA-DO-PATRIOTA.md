@@ -15,3 +15,7 @@ O manual `231031_manual_marca.pdf` também excedeu o limite de transferência de
 Build de produção aprovado; verificar entrega do MP4 e suporte a Range no preview com base `/abuhsca/`.
 
 Peça original `Bem-vindo (Feed).png` recebida em ZIP acessível e adicionada à seção Material de divulgação. PNG 1080 × 1080 preservado integralmente, com link para abrir o original em nova aba, texto alternativo e layout fluido. Build aprovado.
+
+## Manual incorporado
+
+PDF comprimido recebido (735.239 bytes), examinado e incorporado. 18 páginas originais disponíveis antes do vídeo, com prévias JPEG, seletor de página, anterior/próxima e links para abrir ou baixar o PDF. Conteúdo: conceito, versões, cores, área de proteção, redução, fundos, usos incorretos, grafismos, tipografia e aplicações. Build aprovado. Navegador: carregamento das 18 prévias, navegação e limites, PDF acessível, vídeo/arte preservados e larguras 320, 390, 768 e 1440 px.
