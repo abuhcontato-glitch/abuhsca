@@ -11,3 +11,11 @@ Entregas: planejamento de marketing; uma campanha mensal Meta Ads; até quatro r
 10 seções: abertura, biografia completa, metodologia, planejamento/briefing, criação, campanha, ativação, jornada, investimento/alinhamento e FAQ com dez respostas. Briefing e checklist em estado local sem envio; resumo revisável, copiável e baixável. Não há contratação ou cobrança automática.
 
 Verificação: build e 16 testes existentes aprovados; navegador com biografia idêntica, mesmas classes/componentes do modelo, dez seções, nove transições de faixas cruzadas, seis etapas da jornada, sete entregas, briefing/checklist/resumo/download e menu/âncoras móveis. Sem transbordamento em 320/390/768/1440 px. Construcel mantém faixas, rota, estrutura e configuração comercial originais.
+
+## Onboarding e imagens
+
+A página passou a se chamar ONBOARDING LUXUOSA no hero, menu, título do navegador, botões e resumo. Rota pública mantida em `#/luxuosa`. Foram criadas seis imagens exclusivas, sem faixas de títulos sobre a arte, para metodologia, planejamento, gravação com celular, campanha Meta Ads, ativação e alinhamento. Todas são visuais ilustrativos do processo, sem retratos identificados como cliente nem resultados reais atribuídos à Luxuosa. Originais preservados em `/workspace/generated_images`; versões WebP para a página somam aproximadamente 855 KB.
+
+Galerias com ampliação acessível, fechamento por Escape e retorno de foco. Guias vazios de gravação removidos. Layout aprovado, biografia, escopo de R$ 300 e estruturas da Construcel preservados.
+
+Validação: build e 16 testes; navegador com carregamento/ampliação das seis imagens, nomenclatura Onboarding, ausência dos guias vazios, briefing/resumo, dez FAQs, sete entregas e larguras 320/390/768/1440 px. Página Construcel segue com título Proposta.
