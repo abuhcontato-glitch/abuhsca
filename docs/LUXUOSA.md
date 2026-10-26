@@ -19,3 +19,11 @@ A página passou a se chamar ONBOARDING LUXUOSA no hero, menu, título do navega
 Galerias com ampliação acessível, fechamento por Escape e retorno de foco. Guias vazios de gravação removidos. Layout aprovado, biografia, escopo de R$ 300 e estruturas da Construcel preservados.
 
 Validação: build e 16 testes; navegador com carregamento/ampliação das seis imagens, nomenclatura Onboarding, ausência dos guias vazios, briefing/resumo, dez FAQs, sete entregas e larguras 320/390/768/1440 px. Página Construcel segue com título Proposta.
+
+## Moda feminina e UPSELL
+
+Segmento confirmado: loja online de moda feminina. Abertura, briefing, roteiro, planejamento, checklist e exemplos agora tratam de roupas, looks, caimento, tecido, tamanhos, cores e disponibilidade, sem inventar estoque ou persona. Criadas duas imagens ilustrativas de moda feminina: gravação com vestido e evolução para conteúdo/loja online.
+
+Seção UPSELL no final, após o FAQ, com seis adicionais opcionais: edição de Reels, criativos estáticos, produção de looks, organização do WhatsApp Business, landing page e e-commerce. Reutiliza os preços sugeridos e limites de escopo de `freelanceCatalog`. Seleção registra interesse, soma somente entregas pontuais e entra no resumo, sem alterar a gestão de R$ 300/mês nem contratar ou cobrar. Botão de solicitação desativado sem escolha. Custos externos e aceite separado explícitos.
+
+São agora 11 seções. Build e 16 testes passaram. Navegador: seis opções, total de R$ 370 para edição de Reels + arte, mensalidade preservada, resumo atualizado, remoção/limpeza, formulário, sete imagens carregando/ampliando, quatro larguras 320/390/768/1440 e sete entregas/dez FAQs preservados.
